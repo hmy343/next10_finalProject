@@ -1,0 +1,36 @@
+.search{
+    display:flex;
+    height: 960px;
+}
+
+.searchleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchright{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.searcharea{
+    height: 50%;
+    background-color: lightgrey;
+}
+
+.searchallvisitor{
+    flex-grow: 1;
+    background-color: lightseagreen
+}
+
+.searchmap{
+    height: 50%;
+    background-color: lightyellow;
+}
+
+.searchvisitor{
+    flex-grow: 1;
+    background-color: lightsteelblue;
+}
