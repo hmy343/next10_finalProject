@@ -1,0 +1,23 @@
+.cost{
+    display : flex;
+    height: 960px;
+}
+
+.costleft{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.costright{
+    flex-grow: 1;
+}
+
+.costuse{
+    height: 50%;
+    background-color: lightslategray;
+}
+
+.costarea{
+    flex-grow: 1;
+}
