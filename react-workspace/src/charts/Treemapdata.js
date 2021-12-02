@@ -1,4 +1,4 @@
-const Bardata = {
+const data = {
     name: 'Celtics',
     children: [
       {
@@ -104,4 +104,4 @@ const Bardata = {
     ],
   };
   
-  export default Bardata;
+  export default data;

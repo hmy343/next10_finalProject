@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios';
-import data from "./Data";
 
 
 class Test extends React.Component{

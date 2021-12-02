@@ -1,7 +1,8 @@
 import React from 'react';
 import "../css/Main.css";
-import Bar2 from './Bar2';
-import App2 from './App2';
+import Bar2 from '../charts/Bar2';
+// import App2 from './App2';
+import Sankey from '../charts/Sankeyinflow';
 
 function Main() {
   return (
@@ -29,7 +30,8 @@ function Main() {
       </div>
       <div className="mainright">
         <div className="tourindexmap">
-          <App2/>
+          {/* <App2/> */}
+          <Sankey/>
         </div>
       </div>
     </div>
