@@ -1,5 +1,5 @@
 import Treemap from './Treemap1';
-import data from './Data';
+import data from './Bardata';
 
 function App2() {
   return (

@@ -35,14 +35,14 @@ export default function Treemap1({ data, width, height }) {
       .attr('width', (d) => d.x1 - d.x0)
       .attr('height', (d) => d.y1 - d.y0)
       .attr('fill', (d) => colorScale(d.data.name));
-
+        // 이름끼리 색맞추기
       nodes
         .append('text')        
         .text((d) => `${d.data.name} ${d.data.value}`)
         .attr('font-size', `${fontSize}px`)
         .attr('x', 3)
         .attr('y', fontSize)
-
+        // 트리맵에 이름 넣기
       
 
     
