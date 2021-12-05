@@ -1,0 +1,36 @@
+.keyword{
+    display:flex;
+    height: 960px;
+    flex-direction: column;
+}
+
+.keywordtop{
+    height:45%;
+    display: flex;
+    background-color: rgb(228, 228, 228);
+    margin: 0px 10px 10px 10px;
+}
+.keywordbottom {
+    height:45%;
+    display: flex;
+    background-color: rgb(228, 228, 228);
+    margin: 0px 10px 0px 10px;
+    
+}
+
+.keywordtop .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 100%;
+    width: 420px;
+    margin-left: 600px;
+}
+
+.keywordbottom .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 100%;
+    width: 650px;
+    margin-left: 475px;
+}
+

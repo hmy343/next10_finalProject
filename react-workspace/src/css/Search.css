@@ -1,0 +1,62 @@
+.search{
+    display:flex;
+    height: 960px;
+    flex-direction: column;
+}
+
+.scup{
+    height: 50%;
+    display: flex;
+}
+
+.scdown{
+    flex-grow: 1;
+    height: 50%;
+    display: flex;
+}
+
+.scrank{
+    width: 50%;
+    background-color: rgb(228, 228, 228);
+    margin: 0px 5px 5px 10px;
+    vertical-align: middle;
+}
+
+/* .scrank .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 100%;
+    width: 480px;
+} */
+
+.scmap{
+    flex-grow: 1;
+    background-color: rgb(228, 228, 228);
+    margin: 0px 10px 5px 5px;
+}
+
+/* .sc_map .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 60%;
+    width: 500px;
+} */
+
+.scvisitors{
+    width: 50%;
+    background-color: rgb(228, 228, 228);
+    margin: 5px 5px 10px 10px;
+}
+
+.scage{
+    flex-grow: 1;
+    background-color: rgb(228, 228, 228);
+    margin: 5px 10px 10px 5px;
+}
+
+/* .sc_age .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 60%;
+    width: 500px;
+} */

@@ -1,0 +1,55 @@
+.visitor{
+    height: 960px;
+    display: flex;
+    flex-direction: column;
+}
+
+.visitorup{
+    height: 50%;
+    display: flex;
+}
+
+.visitordown{
+    flex-grow: 1;
+    height:50%;
+    display: flex;
+}
+
+.vpie {
+    width: 30%;
+    background-color: rgb(228, 228, 228);
+    margin: 0px 5px 5px 10px;
+    vertical-align: middle;
+}
+
+.vpie .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 100%;
+    width: 480px;
+}
+
+.vsankey{
+    flex-grow: 1;
+    margin: 0px 10px 5px 5px;
+    background-color: rgb(228, 228, 228);
+}
+
+.vsankey .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    height: 60%;
+    width: 500px;
+}
+
+.vmap{
+    width: 50%;
+    margin: 5px 5px 10px 10px;
+    background-color: rgb(228, 228, 228);
+}
+
+.vfestival{
+    flex-grow: 1;
+    margin: 5px 10px 10px 5px;
+    background-color: rgb(228, 228, 228);
+}
