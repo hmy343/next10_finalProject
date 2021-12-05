@@ -4,32 +4,41 @@ import axios from 'axios';
 
 class Test extends React.Component{
     state = {
-        isLoading: true,
-        testdata: [],
-    };
+        testData: [],
+    }
     getTestdata = async () =>{
-        const { data :{testData},
-        } = await axios.get('http://localhost:3000/test');
-        console.log(testdata)
-        this.setState({testdata,isLoading:false});
-        console.log(testdata)
-};
-componentDidMount(){
-    this.getTestdata();
-    
-}
+        const tData = await axios.get('http://localhost:9999/test');
+        this.setState({testData:tData.data});
+        console.log(tData);
+    }
+    componentDidMount(){
+        this.getTestdata();
+        
+    }
 
-render(){
-    const{isLoading,testdata}=this.state;
-    return(
-        <section className="container">
-            {isLoading ?<div> Loading... </div>:(
-            {testdata}
-            )
-            };
-         </section>
-    )
-}
+
+
+    render(){
+        return(
+            <div className="test">
+            {this.state.testData.map((item, index) => {
+                console.log(this.state.testData);
+                return (
+                    <div key={index}>
+                    <div>
+                        <h2 className="test__name">{item.id}</h2>     
+                        <h2 className="test__name">{item.content}</h2>     
+                        <h2 className="test__name">{item.articleno}</h2>     
+                    </div>
+                    
+                    </div>
+                    )
+            }
+            )}
+        </div>
+                
+        )
+    }
 }
 
 
