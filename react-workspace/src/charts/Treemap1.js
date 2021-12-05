@@ -47,8 +47,6 @@ export default function Treemap1({ data, width, height }) {
 
     
     }
-
-
   
     useEffect(() => {
       renderTreemap();

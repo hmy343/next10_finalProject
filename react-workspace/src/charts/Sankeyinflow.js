@@ -6,10 +6,6 @@ import HighchartsReact from "highcharts-react-official";
 import data from './Sankeydata';
 
 HighchartsSankey(Highcharts);
-
-
-
-
 function Sankeyinflow() {
   return (
     <div className="App">

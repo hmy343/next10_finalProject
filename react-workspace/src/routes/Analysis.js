@@ -1,28 +1,17 @@
 import React from "react";
 import '../css/Analysis.css';
+import Donut from '../charts/Donut';
+import StackedBar from "../charts/StackedBar";
+
 
 function Analysis() {
   return (
     <div className="analysis">
-      <div className="al analysisup">
-          <div className="al indexpie">
-            
-          </div>
-          <div className="al middle">
-            <div className="al middletour">
-
-            </div>
-            <div className="al middleinfra">
-
-            </div>
-            <div className="al middlenature">
-
-            </div>
-          </div> 
+      <div className="analysisup">
+          <div className="indexpie"><Donut/></div>
+          <div className="middle"><StackedBar/></div> 
       </div>
-      <div className="al analysisdown">
-
-      </div>
+      <div className="analysisdown"></div>
     </div>
   );
 }
