@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.AnalysisDao">
+	
+	<select id="indexPro" resultType="Analysis">
+		SELECT IC.SUB_INDEX, INDEX_KPI
+		FROM DM_INDEX_PRO PR, INDEX_CODE IC
+		WHERE PR.MAIN_INDEX_CD = IC.MAIN_INDEX_CD AND PR.MID_INDEX_CD = IC.MID_INDEX_CD
+	    	AND PR.SUB_INDEX_CD = IC.SUB_INDEX_CD
+	</select>
+	
+	<select id="midInsex" resultType="Analysis">
+		SELECT SGG.SGG_NM, DM.TOUR_RSC, DM.TOUR_INFRA, DM.TOUR_EFFECT
+		FROM DM_MID_INDEX DM, SGG_CODE SGG
+		WHERE DM.SGG_CD = SGG.SGG_CD
+	</select>
+	
+	<select id="allIndex" resultType="Analysis">
+		SELECT SGG.SGG_NM, DM.HIS_RSC, DM.FACILITY, DM.FESTIVAL,
+			DM.RESIDENCE, DM.SAFETY, DM.VISITORS, DM.INDUSTRY
+		FROM DM_INDEX DM, SGG_CODE SGG
+		WHERE SGG.SGG_CD = DM.SGG_CD
+	</select>
+</mapper>
