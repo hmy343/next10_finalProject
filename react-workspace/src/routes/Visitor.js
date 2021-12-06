@@ -1,18 +1,19 @@
 import React from 'react';
 import '../css/Visitor.css';
-import Visit_Pie from '../charts/Visit_Pie';
+import VisitPie from '../charts/VisitPie';
 import Sankeyinflow from '../charts/Sankeyinflow';
+import VisitCombo from '../charts/VisitCombo';
 
 function Visitor(){
     return(
         <div className="visitor">
             <div className="visitorup">
-                <div className="vpie"><Visit_Pie/></div>
+                <div className="vpie"><VisitPie/></div>
                 <div className="vsankey"><Sankeyinflow/></div>
             </div>
             <div className="visitordown">
                 <div className="vmap"></div>
-                <div className="vfestival"></div>
+                <div className="vfestival"><VisitCombo/></div>
             </div>
         </div>
     );

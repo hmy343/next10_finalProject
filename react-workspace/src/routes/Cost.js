@@ -1,14 +1,14 @@
 import React from "react";
 import '../css/Cost.css';
-import Cost_Pie from '../charts/Cost_Pie'
-import Cost_MixedBar from '../charts/Cost_MixedBar'
+import CostPie from '../charts/CostPie'
+import CostMixedBar from '../charts/CostMixedBar'
 
 function Cost(){
     return(
         <div className="cost">
             <div className="costleft">
-                <div className="costuse"><Cost_Pie/></div>
-                <div className="costarea"><Cost_MixedBar/></div>
+                <div className="costuse"><CostPie/></div>
+                <div className="costarea"><CostMixedBar/></div>
             </div>
             <div className="costright"></div>
         </div>

@@ -7,7 +7,6 @@ import Keyword from './routes/Keyword';
 import Search from './routes/Search';
 import Visitor from './routes/Visitor';
 import Cost from './routes/Cost';
-// import Test from './routes/Test';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <Route path="/search" element={<Search/>}/>
         <Route path="/visitor" element={<Visitor/>}/>
         <Route path="/cost" element={<Cost/>}/>
-        {/* <Route path="/test" element={<Test/>}/> */}
       </Routes>
     </div>
   );

@@ -11,7 +11,7 @@
 
 .visitordown{
     flex-grow: 1;
-    height:50%;
+    /* height:50%; */
     display: flex;
 }
 
@@ -24,7 +24,7 @@
 
 .vpie .chart-container{
     padding: 4% 3% 0 3%;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     height: 100%;
     width: 480px;
 }
@@ -33,13 +33,15 @@
     flex-grow: 1;
     margin: 0px 10px 5px 5px;
     background-color: rgb(228, 228, 228);
+    padding-top: 20px;
 }
 
-.vsankey .chart-container{
+.highcharts-background{
     padding: 4% 3% 0 3%;
     border: 2px solid gray;
-    height: 60%;
-    width: 500px;
+    /* height: 60%; */
+    width: 100%;
+    background-color: rgb(228, 228, 228);
 }
 
 .vmap{
@@ -52,4 +54,11 @@
     flex-grow: 1;
     margin: 5px 10px 10px 5px;
     background-color: rgb(228, 228, 228);
+}
+
+.vfestival .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 2px solid gray;
+    width: 90%;
+    margin-left: 5%;
 }

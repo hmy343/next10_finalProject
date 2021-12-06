@@ -9,28 +9,30 @@
     display: flex;
     background-color: rgb(228, 228, 228);
     margin: 0px 10px 10px 10px;
+    padding-left: 35%
 }
 .keywordbottom {
-    height:45%;
+    height:55%;
     display: flex;
     background-color: rgb(228, 228, 228);
     margin: 0px 10px 0px 10px;
-    
+    padding-left: 27%
 }
 
 .keywordtop .chart-container{
     padding: 4% 3% 0 3%;
-    border: 2px solid gray;
+    border: 1px dotted gray;
     height: 100%;
     width: 420px;
-    margin-left: 600px;
+    /* margin-left: 500px; */
 }
 
 .keywordbottom .chart-container{
-    padding: 4% 3% 0 3%;
-    border: 2px solid gray;
+    padding: 8% 3% 0 3%;
+    border: 1px dotted gray;
     height: 100%;
-    width: 650px;
-    margin-left: 475px;
+    width: 750px;
 }
+
+
 

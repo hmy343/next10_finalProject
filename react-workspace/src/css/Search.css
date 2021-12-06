@@ -22,11 +22,13 @@
     vertical-align: middle;
 }
 
-/* .scrank .chart-container{
-    padding: 4% 3% 0 3%;
+.recharts-legend-wrapper {
+    border: 1px dotted gray;
+}
+
+/* .recharts-layer .recharts-pie{
+    width: 50%;
     border: 2px solid gray;
-    height: 100%;
-    width: 480px;
 } */
 
 .scmap{
@@ -48,15 +50,24 @@
     margin: 5px 5px 10px 10px;
 }
 
+.scvisitors .chart-container{
+    padding: 4% 3% 0 3%;
+    border: 1px dotted gray;
+    width: 89%;
+    /* height: 85%; */
+    margin-left: 6%;
+}
+
 .scage{
     flex-grow: 1;
     background-color: rgb(228, 228, 228);
     margin: 5px 10px 10px 5px;
+    width: 40%;
 }
 
-/* .sc_age .chart-container{
+.sc_age .chart-container{
     padding: 4% 3% 0 3%;
     border: 2px solid gray;
-    height: 60%;
+    /* height: 30%; */
     width: 500px;
-} */
+}

@@ -1,40 +1,27 @@
 import React from 'react';
 import "../css/Main.css";
-import Bar2 from '../charts/Bar2';
-import Map from './Map';
+import SearchBar from '../charts/SearchBar';
 // import App2 from './App2';
-// import Sankey from '../charts/Sankeyinflow';
+import Sankey from '../charts/Sankeyinflow';
 
 function Main() {
   return (
     <div className="mainbox">
       <div className="al mainleft">
-        <div className="al tourindex">
-            <Bar2 />
-        </div>
+        <div className="al tourindex">관광지수</div>
         <div className="al smallmenu">
-
           <div className="al visitcost">
-            <div className="al visitormenu">
-              
-            </div>
-            <div className="al costmenu">
-
-            </div>
+            <div className="al visitormenu">방문자수</div>
+            <div className="al costmenu">사용금액</div>
           </div>
           <div className="al tourkey">
-            <div className="al toursearch"></div>
-            <div className="al keywordsearch"></div>
+            <div className="al toursearch">관광지 검색</div>
+            <div className="al keywordsearch">검색 키워드</div>
           </div>
         </div>
-
       </div>
       <div className="mainright">
-        <div className="tourindexmap">
-          {/* <App2/> */}
-          {/* <Sankey/> */}
-          <Map/>
-        </div>
+        <div className="tourindexmap">관광지수 지도</div>
       </div>
     </div>
   );

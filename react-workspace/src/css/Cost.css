@@ -19,6 +19,7 @@
     height: 50%;
     background-color: rgb(228, 228, 228);
     margin: 0px 5px 5px 10px;
+    padding-left: 15%;
 }
 
 .costarea{
@@ -29,7 +30,7 @@
 
 .costuse .chart-container{
     padding: 4% 3% 0 3%;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     height: 100%;
     width: 470px;
     /* margin-left: 20px; */
@@ -37,7 +38,7 @@
 
 .costarea .chart-container{
     padding: 4% 3% 0 3%;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     height: 100%;
     width: 100%;
     margin-top: 23px;

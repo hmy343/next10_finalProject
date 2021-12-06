@@ -1,18 +1,20 @@
 import React from "react";
 import '../css/Search.css';
-import App2 from '../charts/App2'
-import Bar2 from '../charts/Bar2';
+import ScTreemap from '../charts/ScTreemap'
+import SearchBar from '../charts/SearchBar';
+import SearchPie from "../charts/SearchPie";
+
 
 function Search(){
     return(
       <div className="search">
             <div className="scup">
-                <div className="scrank"></div>
+                <div className="scrank"><SearchPie/></div>
                 <div className="scmap"></div>
             </div>
             <div className="scdown">
-                <div className="scvisitors"><Bar2/></div>
-                <div className="scage"><App2 /></div>
+                <div className="scvisitors"><SearchBar/></div>
+                <div className="scage"><ScTreemap/></div>
             </div>
         </div>
     );
