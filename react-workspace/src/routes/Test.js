@@ -6,10 +6,21 @@ class Test extends React.Component{
     state = {
         testData: [],
     }
+    
     getTestdata = async () =>{
-        const tData = await axios.get('http://localhost:9999/test');
-        this.setState({testData:tData.data});
-        console.log(tData);
+        const tData = await axios.get('http://localhost:9797/cost')
+        .then((response) =>{
+            const { data } = response;
+            // console.log(data)
+            this.setState({
+                
+                testData : data
+            })
+            // console.log(this.testDat0a)
+        })
+        // console.log(this.state.testData);
+        // this.setState({testData:tData.data});
+        
     }
     componentDidMount(){
         this.getTestdata();
@@ -19,23 +30,24 @@ class Test extends React.Component{
 
 
     render(){
+        let tmp = null
+        // if(this.state.testData){
+        //     tmp = this.state.testData.map((data)=>
+        //     <div>{data.expn_biz}</div>)
+        //     console.log("ddddddd")
+        // }
         return(
+           
             <div className="test">
-            {this.state.testData.map((item, index) => {
-                console.log(this.state.testData);
-                return (
-                    <div key={index}>
-                    <div>
-                        <h2 className="test__name">{item.id}</h2>     
-                        <h2 className="test__name">{item.content}</h2>     
-                        <h2 className="test__name">{item.articleno}</h2>     
-                    </div>
-                    
-                    </div>
-                    )
-            }
-            )}
-        </div>
+            {console.log("www")}
+            {console.log(this.state.testData)}
+            {/* {this.state.testData.expn_biz.map((data,index)=>{
+                return (<div key={index}>{data.expn_biz_nm}</div>)
+            })} */}
+             {this.state.testData.expn_biz&&this.state.testData.expn_biz.map((data,index)=>{
+                return (<div key={index}>{data.expn_biz_nm}</div>)
+            })}
+            </div>
                 
         )
     }

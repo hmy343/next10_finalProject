@@ -50,6 +50,8 @@ public class CostController {
 		}
 		json.put("sgg_vstr_expn", sgg_vstr_expn);
 		
+		
+		System.out.println(json);
 		return json.toJSONString();
 	}
 
