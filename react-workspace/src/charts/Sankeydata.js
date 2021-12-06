@@ -1,6 +1,6 @@
 module.exports = {
     title: {
-      text: "유입도시별 방문지"
+      text: ""
     },
     series: [
       {
@@ -37,6 +37,21 @@ module.exports = {
           ["England", "Senegal", 1],
           ["England", "Morocco", 2],
           ["England", "South Africa", 7],
+          ["South Africa", "China", 5],
+          ["South Africa", "India", 1],
+          ["South Africa", "Japan", 3],
+          ["Angola", "China", 5],
+          ["Angola", "India", 1],
+          ["Angola", "Japan", 3],
+          ["Senegal", "China", 5],
+          ["Senegal", "India", 1],
+          ["Senegal", "Japan", 3],
+          ["Mali", "China", 5],
+          ["Mali", "India", 1],
+          ["Mali", "Japan", 3],
+          ["Morocco", "China", 5],
+          ["Morocco", "India", 1],
+          ["Morocco", "Japan", 3]
         ],
         type: "sankey",
         name: "Sankey demo series"

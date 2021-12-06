@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function Cost_Pie(){
+function Cost_Pie(data1,data2){
   const canvasDom = useRef(null);
   const colors = ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)', 'rgb(201, 203, 207)']
   const labels = ['요식/유흥', '교육/학원', '의류/잡화', '미용', '스포츠/문화/레저', '음/식료품', '여행/교통', '가전/가구', '가정생활/서비스', '주유', '자동차', '온라인거래']

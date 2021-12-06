@@ -59,9 +59,9 @@ public class SearchController {
 		searchList = (List<Search>)searchService.ageTd();
 		for (Search s:searchList) {
 			JSONObject o = new JSONObject();
-			o.put("age", s.getAge()+"대");
-			o.put("tour_ds_nm", s.getTour_ds_nm());
-			o.put("vstr_total", s.getVstr_total());
+			o.put("category", s.getAge()+"대");
+			o.put("name", s.getTour_ds_nm());
+			o.put("value", s.getVstr_total());
 			age_td_vstr.add(o);
 		}
 		

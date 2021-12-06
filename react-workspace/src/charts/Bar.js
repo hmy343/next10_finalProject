@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function Bar2({data1,data2,data3}){
+function Bar({data1,data2}){
   //console.log('Bar2 => ', data1)
   //console.log('Bar2 => ', data2)
   const canvasDom = useRef(null);
@@ -19,12 +19,6 @@ function Bar2({data1,data2,data3}){
           {
             label:'data',
             data:data2,
-            borderWidth:1,
-            barPercentage:0.7,
-          },
-          {
-            label:'data',
-            data:data3,
             borderWidth:1,
             barPercentage:0.7,
           },
@@ -45,4 +39,4 @@ function Bar2({data1,data2,data3}){
   );
 }
 
-export default Bar2;
+export default Bar;
