@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+ <configuration>
+ 	<mappers>
+ 		<mapper resource="mybatis/mappers/visitor.xml" />
+ 		<mapper resource="mybatis/mappers/cost.xml" />
+ 		<mapper resource="mybatis/mappers/search.xml" />
+ 		<mapper resource="mybatis/mappers/analysis.xml" />
+ 		<mapper resource="mybatis/mappers/keyword.xml" />
+ 	</mappers>
+ </configuration>
+ 
+ 

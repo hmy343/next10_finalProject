@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.SearchDao">
+
+	<select id="subCnt" resultType="search">
+		SELECT KC.KEY_WORD, SC.SR_SUB_TYPE, DM.SUB_CNT
+		FROM DM_SR_SUB_CNT DM, SR_SUB_TYPE_CODE SC, DS_KEYW_CODE KC
+		WHERE DM.SUB_TYPE = SC.SR_SUB_TYPE_CD
+		    AND DM.MAIN_TYPE = SC.DS_KEYW_CD
+		    AND DM.MAIN_TYPE = KC.KEYW_CD
+	</select>
+	
+	<select id="tdVstr" resultType="search">
+		SELECT TC.TOUR_DS_NM, DM.VSTR_TOTAL
+		FROM DM_TS_TD_VSTR_SL DM, TS_TD_CODE TC
+		WHERE DM.TOUR_DS_CD = TC.TOUR_DS_CD
+	</select>
+	
+	<select id="ageTd" resultType="search">
+		SELECT DM.AGE, TC.TOUR_DS_NM, DM.VSTR_TOTAL
+		FROM DM_TS_AGE_TD_VSTR DM, TS_TD_CODE TC
+		WHERE DM.TOUR_DS_CD = TC.TOUR_DS_CD
+	</select>
+</mapper>

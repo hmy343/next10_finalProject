@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.VisitorDao">
+	
+	<select id="ctpvVstr" resultType="Visitor">
+		SELECT AC.CTPV_NM, VSTR_TOTAL
+		FROM DM_TS_CTPV_VSTR DM, AM_CODE AC
+		WHERE DM.CTPV_CD = AC.CTPV_CD
+	</select>
+	
+	<select id="ctsgVstr" resultType="Visitor">
+		SELECT AM.CTPV_NM, SGG.SGG_NM, DM.VSTR_TOTAL
+		FROM DM_TS_CTSG_VSTR DM, SGG_CODE SGG, AM_CODE AM
+		WHERE DM.SGG_CD = SGG.SGG_CD AND AM.CTPV_CD = DM.CTPV_CD
+	</select>
+	
+	<select id="sgtdVstr" resultType="visitor">
+		SELECT SGG.SGG_NM, TC.TOUR_DS_NM, DM.VSTR_TOTAL
+		FROM DM_TS_SGTD_VSTR DM, SGG_CODE SGG, TS_TD_CODE TC
+		WHERE DM.SGG_CD = SGG.SGG_CD AND DM.TOUR_DS_CD = TC.TOUR_DS_CD
+	</select>
+	
+	<select id="vsFest" resultType="visitor">
+		SELECT * FROM DM_VS_FEST_MON
+	</select>
+</mapper>

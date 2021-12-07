@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import axios from 'axios';
 import '../css/Visitor.css';
-import Pie from '../charts/VisitPie';
+import VisitPie from '../charts/VisitPie';
 import Sankeyinflow from '../charts/Sankeyinflow';
 import VisitCombo from '../charts/VisitCombo';
 
@@ -25,9 +25,9 @@ const Visitor = () => {
         )
     })
     const makePieChart = (d1,d2) => {
-        return(<Pie d1={d1} d2={d2} />)
+        return(<VisitPie d1={d1} d2={d2} />)
     }
-    
+
     return(
         <div className="visitor">
             <div className="visitorup">

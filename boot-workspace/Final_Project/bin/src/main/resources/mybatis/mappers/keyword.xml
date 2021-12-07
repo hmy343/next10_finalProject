@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.KeywDao">
+	
+	<select id="dsSrch" resultType="Keyword">
+		SELECT KC.KEY_WORD, DM.RATE
+		FROM DM_DS_SRCH DM, DS_KEYW_CODE KC
+		WHERE DM.KEYW_CD = KC.KEYW_CD
+	</select>
+
+	<select id="cnpExpd" resultType="Keyword">
+		SELECT MC.MAIN_TYPE, DM.ENP, DM.EXPD_TOTAL
+		FROM DM_CNP_EXPD DM, BS_MAIN_TYPE_CODE MC
+		WHERE DM.MAIN_TYPE_CD = MC.MAIN_TYPE_CD
+	</select>
+</mapper>

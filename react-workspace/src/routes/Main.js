@@ -13,7 +13,6 @@ function Main() {
         <div className="search">관광지 검색</div>
         <div className="keyword">검색 키워드</div>
       </div>
-      
     </div>
   );
 }
@@ -24,7 +23,7 @@ export default Main;
 // 1. 관광지수(Analysis) - Donut, StackedBar, Table
 // 2. 방문객 수(Visitor) - VisitPie, Sankeyinflow(+Sankeydata, Sankeyinflow), VisitCombo
 // 3. 사용금액(Cost) - CostPie, CostMixedBar
-// 4. 관광지 검색(Search) - SearchPie, SearchBar, ScTreemap(+Treemapdata, Treemap1)
+// 4. 관광지 검색(Search) - SearchPie, SearchTb, SearchBar, ScTreemap(+Treemapdata, Treemap1)
 // 5. 검색 키워드(Keyword) - KwPie, KwMixedBar 
 
 // const elements = geojson.features

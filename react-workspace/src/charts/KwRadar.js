@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function KwPie(){
+function KwRadar(){
   const canvasDom = useRef(null);
   const labels = ['문화/관광/여가서비스업','관광쇼핑업','관광식음료업','관광숙박업','관광운수업','여행서비스업']
   const value=[12,33,15,25,9,6]
@@ -67,4 +67,4 @@ function KwPie(){
   );
 }
 
-export default KwPie;
+export default KwRadar;

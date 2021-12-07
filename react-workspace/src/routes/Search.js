@@ -1,15 +1,14 @@
-import '../css/Search.css';
-import ScTreemap from '../charts/ScTreemap'
-import SearchBar from '../charts/SearchBar';
 import React, {
     useRef,
     useEffect,
     useState
 } from 'react';
+import axios from "axios";
+import '../css/Search.css';
+import ScTreemap from '../charts/ScTreemap'
+import SearchBar from '../charts/SearchBar';
 import ScDonut from "../charts/ScDonut";
 import Table from 'react-bootstrap/Table'
-import axios from "axios";
-
 
 const Search= () =>{
     // const [chart, setChart] = useState(null)
@@ -26,7 +25,6 @@ const Search= () =>{
         const totals = td_vstr.map(item => item.vstr_total)
         const nms = td_vstr.map(item => item.tour_ds_nm)
 
-
        
         // setChart(
         //     makeBubbleChart()
@@ -37,21 +35,21 @@ const Search= () =>{
     },[]);
 
     const makeBarChart = (d1, d2) => {
-        return(<Bar data1 = {d1} data2 = {d2}/>)    
+        return(<SearchBar data1 = {d1} data2 = {d2}/>)    
     }
 
     return(
       <div className="search">
             <div className="scup">
                 <div className="scrank">
-                        <div className="scdonut"><ScDonut/></div>
-                        <div className="sctable"><Table/></div>
-                    </div>
+                    <div className="scdonut"><ScDonut/></div>
+                    <div className="sctable"><Table/></div>
+                </div>
                 <div className="scmap"></div>
             </div>
             <div className="scdown">
                 <div className="scvisitors">{chart2}</div>
-                <div className="scage"><ScTreemap /></div>
+                <div className="scage"><ScTreemap/></div>
             </div>
         </div>
     );

@@ -3,19 +3,23 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function SearchBar(){
+function SearchBar({data1,data2}){
+  //console.log('Bar2 => ', data1)
+  //console.log('Bar2 => ', data2)
   const canvasDom = useRef(null);
-  const labels=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
-  const data = [282.5,246.2,197.1,181.3,163.3,154.6,133.2,110.5,84.5,77.9,62.6,56.6,49.3,45.8,45.3,32.7,27.4,25.0,20.8,19.7,19.7,17.9,8.9,8.3,4.4,3.3]
+
+  // console.log(data2[0])
+  // const labels=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
+  // const data = [282.5,246.2,197.1,181.3,163.3,154.6,133.2,110.5,84.5,77.9,62.6,56.6,49.3,45.8,45.3,32.7,27.4,25.0,20.8,19.7,19.7,17.9,8.9,8.3,4.4,3.3]
   useEffect(()=>{
     const ctx =canvasDom.current.getContext("2d");
     new Chart(ctx,{
       type: "bar",
       data:{
-        labels:labels,
+        labels:data1,
         datasets:[
           {
-            data:data,
+            data:data2,
             label: '총방문자수'
           },
         ],

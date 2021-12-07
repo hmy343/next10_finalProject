@@ -1,53 +1,45 @@
-div.mainbox {
+.mainbox {
     display:flex;
-    height: 960px;
+    height: 780px;
 }
 
-div.mainleft {
-    width: 40%;
+.mainleft {
+    width: 70%;
     background-color: lightgray;
     display: flex;
     flex-direction: column;
+    margin: 0px 5px 10px 10px;
 }
-div.tourindex{
-    height: 50%;
-}
-div.smallmenu{
+
+.mainright{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin: 0px 10px 10px 5px;
 }
 
-div.mainright{
-    flex-grow: 1;
-    display: flex;
+.indexmap{
+   /* border: 2px dotted gray; */
+   height: 100%;
 }
 
-.visitcost{
-    height: 50%;
+.visitor{
     background-color: limegreen;
     display: flex;
+    margin-bottom: 10px;
 }
 
-.tourkey{
-    flex-grow:1;
-    display: flex;
-}
-
-.visitormenu{
-    width: 50%;
-}
-
-.costmenu{
-    flex-grow: 1;
+.cost{
     background-color: lightskyblue;
+    margin-bottom: 10px;
 }
 
-.toursearch{
-    width: 50%;
+.search{
+
+    background-color: rgb(200, 250, 135);
+    margin-bottom: 10px;
 }
 
-.keywordsearch{
-    flex-grow: 1;
-    background-color: lightsteelblue;
+.keyword{
+    background-color: rgb(251, 184, 187);
 }

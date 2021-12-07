@@ -7,7 +7,7 @@ import axios from 'axios';
 import '../css/Analysis.css';
 import Donut from '../charts/Donut';
 import StackedBar from "../charts/StackedBar";
-
+import AnTable from "../charts/AnTable";
 
 const Analysis = () => {
   const [chart,setChart] =useState(null)
@@ -45,9 +45,9 @@ const Analysis = () => {
     <div className="analysis">
       <div className="analysisup">
           <div className="indexpie">{chart}</div>
-          <div className="middle">{chart2}</div> 
+          <div className="middle">{chart2}</div>
       </div>
-      <div className="analysisdown"></div>
+      <div className="analysisdown"><AnTable/></div>
     </div>
   );
 }

@@ -1,39 +1,39 @@
 import Chart from 'chart.js/auto';
 import { useEffect } from 'react';
-import React, { useRef } from 'react';
+import React,{useRef} from 'react';
 
 
-function Cost_MixedBar() {
+function CostMixedBar({data1,data2,data3}){
+  //console.log('Bar2 => ', data1)
+  //console.log('Bar2 => ', data2)
   const canvasDom = useRef(null);
-  const colors = ['rgb(255, 205, 86)', 'rgb(75, 192, 192)']
-  const labels = ['중구', '금정구', '수영구','서구', '기장군','영도구','부산진구','남구','사하구','해운대구','강서구']
-  const visitors = [33784643, 33826, 1624442, 453164,626000,615022,4961205,197722,668563,7340905,493716]
-  const expense = [827,372,74,2,4543,89,93,6149,1]
-  const data = {
-    labels: labels,
-    datasets: [
-      {
-        type: "bar",
-        label: '방문자수',
-        data: visitors,
-        backgroundColor: colors[0],
-        yAxisID: 'y'
+ 
+  // console.log(data2[0])
+  useEffect(()=>{
+    const ctx =canvasDom.current.getContext("2d");
+    new Chart(ctx,{
+      type: "bar",
+      data:{
+        labels:data1,
+        datasets:[
+          {
+            label:'방문자수',
+            data:data2,
+            borderWidth:1,
+            barPercentage:0.7,
+            backgroundColor: [ 'red' ],
+            yAxisID: 'y'           
+          },
+          {
+            label:'사용금액',
+            data:data3,
+            borderWidth:1,
+            barPercentage:0.7,
+            yAxisID: 'y_sub'
+          },
+        ],
       },
-      {
-        type: "bar",
-        label: '관광지출액',
-        data: expense,
-        backgroundColor: colors[1],
-        yAxisID: 'y_sub'
-      },
-    ]
-  }
-  useEffect(() => {
-    const ctx = canvasDom.current.getContext("2d");
-    new Chart(ctx, {
-
-      data: data,
-      options: {
+      options:{
         responsive: true,
         interaction: { // 호버를 했을 때 뜨는 튤팁에 index 값들이 모두 보여짐.
           mode: 'index'
@@ -62,8 +62,8 @@ function Cost_MixedBar() {
             display: true,
             position: 'left',
             ticks: {
-              stepSize: 5000000,
-              max: 32000000
+              stepSize: 100,
+              max: 1000
             },
             title: {
               display: true,
@@ -78,7 +78,7 @@ function Cost_MixedBar() {
             position: 'right',
             ticks: {
               stepSize: 1000,
-              max: 7000
+              max: 10000
             },
             title: {
               display: true,
@@ -90,17 +90,17 @@ function Cost_MixedBar() {
             },
           }
         }
-      },
-    })
+      }
+    });
   },[]);
 
-return (
-  <div>
-    <div className="chart-container">
-      <canvas ref={canvasDom} height="180"></canvas>
+  return(
+    <div>
+      <div className="chart-container">
+        <canvas ref={canvasDom} height="180"></canvas>
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
-export default Cost_MixedBar;
+export default CostMixedBar;

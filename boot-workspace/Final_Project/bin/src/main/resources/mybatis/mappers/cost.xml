@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.CostDao">
+	
+	<select id="expnBiz" resultType="cost">
+		SELECT EC.EXPN_BIZ_NM, DM.EXPN_TOTAL
+		FROM DM_TS_EXPN_BIZ DM, TS_EXPN_BIZ_CODE EC
+		WHERE EC.EXPN_BIZ_CD = DM.EXPN_BIZ_CD
+	</select>
+	
+	<select id="vstrExpn" resultType="cost">
+		SELECT SGG.SGG_NM, VSTR_TOTAL, EXPN_TOTAL
+		FROM DM_TS_SGG_VSTR_EXPN DM, SGG_CODE SGG
+		WHERE SGG.SGG_CD = DM.SGG_CD
+	</select>
+	
+</mapper>
