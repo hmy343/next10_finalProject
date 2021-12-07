@@ -25,7 +25,7 @@ public class SearchController {
 		JSONObject json = new JSONObject();
 		
 		
-		// 관광지 검색 순위 분포 (버블 다이어그램)
+		// 관광지 검색 순위 분포 (도넛)
 		JSONArray sub_cnt = new JSONArray();
 		List<Search> searchList = (List<Search>)searchService.subCnt();
 		//System.out.println(searchList);
