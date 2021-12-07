@@ -49,17 +49,17 @@ public class AnalysisController {
 		anayList = (List<Analysis>)analysisService.midIndex();
 		for (Analysis a:anayList) {
 			JSONObject rsc = new JSONObject();
-			rsc.put("sgg", a.getSgg_nm());
+			rsc.put("sgg_nm", a.getSgg_nm());
 			rsc.put("val", a.getTour_rsc());
 			tour_rsc.add(rsc);
 			
 			JSONObject infra = new JSONObject();
-			infra.put("sgg", a.getSgg_nm());
+			infra.put("sgg_nm", a.getSgg_nm());
 			infra.put("val", a.getTour_infra());
 			tour_infra.add(infra);
 			
 			JSONObject effect = new JSONObject();
-			effect.put("sgg", a.getSgg_nm());
+			effect.put("sgg_nm", a.getSgg_nm());
 			effect.put("val", a.getTour_effect());
 			tour_effect.add(effect);
 		}
@@ -75,7 +75,7 @@ public class AnalysisController {
 		anayList = (List<Analysis>)analysisService.allIndex();
 		for(Analysis a:anayList) {
 			JSONObject o = new JSONObject();
-			o.put("sgg", a.getSgg_nm());
+			o.put("sgg_nm", a.getSgg_nm());
 			o.put("his_rsc", a.getHis_rsc());
 			o.put("facility", a.getFacility());
 			o.put("festival", a.getFestival());

@@ -43,26 +43,29 @@ public class VisitorController {
 		
 		
 		// 생키차트(유입도시-행정구)
-		JSONArray sankey_data = new JSONArray();
+		JSONObject sankey_data = new JSONObject();
+		JSONArray ctsg_snakey = new JSONArray();
 		vstrList = (List<Visitor>)visitorService.ctsgVstr();
 		for (Visitor v:vstrList) {
 			JSONObject o = new JSONObject();
 			o.put("ctpv_nm", v.getCtpv_nm());
 			o.put("sgg_nm", v.getSgg_nm());
 			o.put("vstr_total", v.getVstr_total());
-			sankey_data.add(o);
+			ctsg_snakey.add(o);
 		}
-		
+		sankey_data.put("ctsg_sankey", ctsg_snakey);
 		
 		// 생키차트(행정구-관광지)
+		JSONArray sgtd_snakey = new JSONArray();
 		vstrList = (List<Visitor>)visitorService.sgtdVstr();
 		for (Visitor v:vstrList) {
 			JSONObject o = new JSONObject();
 			o.put("sgg_nm", v.getSgg_nm());
 			o.put("tour_ds_nm", v.getTour_ds_nm());
 			o.put("vstr_total", v.getVstr_total());
-			sankey_data.add(o);
+			sgtd_snakey.add(o);
 		}
+		sankey_data.put("sgtd_sankey", sgtd_snakey);
 		json.put("sankey_data", sankey_data);
 		
 		
