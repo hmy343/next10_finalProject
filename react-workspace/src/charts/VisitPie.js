@@ -3,8 +3,9 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function VisitPie(d1,d2){
+function VisitPie({d1,d2}){
   const canvasDom = useRef(null);
+  console.log(d2);
   const colors = ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)', 'rgb(201, 203, 207)']
   useEffect(()=>{
     const ctx =canvasDom.current.getContext("2d");

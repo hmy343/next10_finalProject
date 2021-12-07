@@ -19,19 +19,19 @@ const Analysis = () => {
     const { mid_index } = data;
     const { tour_infra } = mid_index;
     const { tour_effect } = mid_index;
-    const { tour_resc } = mid_index;
+    const { tour_rsc } = mid_index;
     const sub_indexs = index_pro.map(item => item.sub_index)
     const index_kpis = index_pro.map(item => item.index_kpi)
     const infra_vals = tour_infra.map(item => item.val)
-    const tour_sgg = tour_infra.map(item => item.sgg)
+    const tour_sgg = tour_infra.map(item => item.sgg_nm)
     const effect_vals = tour_effect.map(item => item.val)
-    const resc_vals = tour_resc.map(item => item.val)
+    const rsc_vals = tour_rsc.map(item => item.val)
 
     setChart(
       makePieChart(sub_indexs,index_kpis)
     )
     setChart2(
-      makeStackChart(tour_sgg,infra_vals,effect_vals,resc_vals)
+      makeStackChart(tour_sgg,infra_vals,effect_vals,rsc_vals)
     )
   },[]);
   const makePieChart = (d1, d2) => {

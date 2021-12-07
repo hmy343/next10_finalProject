@@ -63,7 +63,7 @@ public class AnalysisController {
 			effect.put("val", a.getTour_effect());
 			tour_effect.add(effect);
 		}
-		mid_index.put("tour_resc", tour_rsc);
+		mid_index.put("tour_rsc", tour_rsc);
 		mid_index.put("tour_infra", tour_infra);
 		mid_index.put("tour_effect", tour_effect);
 		
