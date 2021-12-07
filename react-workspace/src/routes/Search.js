@@ -1,11 +1,13 @@
 import '../css/Search.css';
 import ScTreemap from '../charts/ScTreemap'
-import Bar from '../charts/Bar';
+import SearchBar from '../charts/SearchBar';
 import React, {
     useRef,
     useEffect,
     useState
 } from 'react';
+import ScDonut from "../charts/ScDonut";
+import Table from 'react-bootstrap/Table'
 import axios from "axios";
 
 
@@ -41,12 +43,14 @@ const Search= () =>{
     return(
       <div className="search">
             <div className="scup">
-                <div className="scrank"></div>
+                <div className="scrank">
+                        <div className="scdonut"><ScDonut/></div>
+                        <div className="sctable"><Table/></div>
+                    </div>
                 <div className="scmap"></div>
             </div>
             <div className="scdown">
                 <div className="scvisitors">{chart2}</div>
-                
                 <div className="scage"><ScTreemap /></div>
             </div>
         </div>
