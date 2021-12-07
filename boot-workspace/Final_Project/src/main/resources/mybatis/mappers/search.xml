@@ -20,7 +20,7 @@
 	
 	<select id="ageTd" resultType="search">
 		SELECT DM.AGE, TC.TOUR_DS_NM, DM.VSTR_TOTAL
-		FROM DM_TS_AGE_TD_VSTR DM, TS_TD_CODE TC
+		FROM DM_TS_AGE_TD_VSTR_SL DM, TS_TD_CODE TC
 		WHERE DM.TOUR_DS_CD = TC.TOUR_DS_CD
 	</select>
 </mapper>
