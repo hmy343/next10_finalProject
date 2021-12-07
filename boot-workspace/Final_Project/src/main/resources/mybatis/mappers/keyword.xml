@@ -12,7 +12,7 @@
 
 	<select id="cnpExpd" resultType="Keyword">
 		SELECT MC.MAIN_TYPE, DM.ENP, DM.EXPD_TOTAL
-		FROM DM_CNP_EXPD DM, BS_MAIN_TYPE_CODE MC
+		FROM DM_CNP_EXPD_SL DM, BS_MAIN_TYPE_CODE MC
 		WHERE DM.MAIN_TYPE_CD = MC.MAIN_TYPE_CD
 	</select>
 </mapper>
