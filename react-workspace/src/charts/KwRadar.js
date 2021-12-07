@@ -3,27 +3,26 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function KwRadar(){
+function KwRadar({data1,data2}){
   const canvasDom = useRef(null);
-  const labels = ['문화/관광/여가서비스업','관광쇼핑업','관광식음료업','관광숙박업','관광운수업','여행서비스업']
-  const value=[12,33,15,25,9,6]
-  const data={
-    labels: labels,
-    datasets:[
-      {
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        data: value,
-        borderColor: 'rgb(255, 99, 132)',
-        // pointBorderWidth: 1,
-        radius: 3, // 포인트 점 크기
-      }
-    ]
-  }
+
+  // console.log(data2)
   useEffect(()=>{
     const ctx =canvasDom.current.getContext("2d");
     new Chart(ctx,{
       type: 'radar',
-      data: data,
+      data: {
+        labels: data1,
+        datasets:[
+          {
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            data: data2,
+            borderColor: 'rgb(255, 99, 132)',
+            // pointBorderWidth: 1,
+            radius: 3, // 포인트 점 크기
+          }          
+        ],
+      },
       options:{
         responsive: true,
         scale: {

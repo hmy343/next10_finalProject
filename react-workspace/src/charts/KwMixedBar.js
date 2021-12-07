@@ -4,12 +4,12 @@ import React, { useRef } from 'react';
 // import { createBootstrapComponent } from 'react-bootstrap/esm/ThemeProvider';
 
 
-function KwMixedBar() {
+function KwMixedBar({data1,data2,data3}) {
   const canvasDom = useRef(null);
   const colors = ['rgb(255, 205, 86)', 'rgb(75, 192, 192)']
-  const labels = ['문화/관광/여가서비스업', '관광쇼핑업', '관광식음료업', '관광숙박업', '관광운수업', '여행서비스업']
-  const datacnp = [1034, 2018, 41082, 14227, 2042, 913]
-  const dataexpd = [940.8, 84.9, 1057.9, 60.5, 147.9, 3.0]
+  const labels = data1
+  const datacnp = data2
+  const dataexpd = data3
   const data = {
     labels: labels,
     datasets: [
@@ -78,13 +78,13 @@ function KwMixedBar() {
           y_sub: { // y축 추가. 'y_sub'라는 id가진 y축에 대한 설정
             position: 'right',
             ticks: {
-              stepSize: 200,
-              max: 1200
+              stepSize: 2000,
+              max: 12000
             },
             title: {
               display: true,
               align: 'end',
-              text: '단위: 십억 원'
+              text: '단위: 억 원'
             },
             grid: {
               display: false
