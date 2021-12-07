@@ -17,13 +17,14 @@ function Bar2({data1,data2,data3}){
         labels:data1,
         datasets:[
           {
-            label:'data',
+            label:'방문자수',
             data:data2,
             borderWidth:1,
             barPercentage:0.7,
+            backgroundColor: [ 'red' ]           
           },
           {
-            label:'data',
+            label:'소비금액',
             data:data3,
             borderWidth:1,
             barPercentage:0.7,

@@ -37,7 +37,7 @@ class Map extends React.Component{
 const Maps = styled.div`
 width: 400px;
 height: 400px;
-margin : 100px 100px 0 130%;
+margin : 100px 100px;
 `;
 
 // const Head = styled.h1`

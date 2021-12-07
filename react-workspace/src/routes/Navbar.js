@@ -26,7 +26,8 @@ function Navbar() {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="Keyword">검색 키워드</a>
-                            </li>          
+                            </li>               
+                            
                         </ul>
                     </div>
                 </div>
