@@ -28,7 +28,7 @@ public class SearchController {
 		// 관광지 검색 순위 분포 (버블 다이어그램)
 		JSONArray sub_cnt = new JSONArray();
 		List<Search> searchList = (List<Search>)searchService.subCnt();
-		System.out.println(searchList);
+		//System.out.println(searchList);
 		for (Search s:searchList) {
 			JSONObject o = new JSONObject();
 			o.put("main_type", s.getKey_word());
@@ -45,6 +45,7 @@ public class SearchController {
 		searchList = (List<Search>)searchService.tdVstr();
 		for (Search s:searchList) {
 			JSONObject o = new JSONObject();
+			o.put("key_word", s.getKey_word());
 			o.put("tour_ds_nm", s.getTour_ds_nm());
 			o.put("vstr_total", s.getVstr_total());
 			td_vstr.add(o);
