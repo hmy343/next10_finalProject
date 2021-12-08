@@ -18,6 +18,7 @@ function Donut({d1,d2}){
             label:'data',
             data:d2,
             backgroundColor: colors,
+           
           },
         ],
       },
@@ -25,8 +26,10 @@ function Donut({d1,d2}){
         responsive: true,
         plugins: {
             legend: {
-                position: 'bottom',
-                align : 'start',
+                position: 'right',
+                align : 'center',
+    
+               
             },
             subtitle: { // 차트 제목
                 display: true,

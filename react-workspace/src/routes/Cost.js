@@ -7,6 +7,7 @@ import axios from 'axios';
 import '../css/Cost.css';
 import CostPie from '../charts/CostPie'
 import CostMixedBar from '../charts/CostMixedBar'
+import CostMap from '../charts/CostMap';
 
 const Cost = () => {
     const [chart, setChart] = useState(null)
@@ -46,7 +47,7 @@ const Cost = () => {
                 <div className="costuse">{chart}</div>
                 <div className="costarea">{chart2}</div>
             </div>
-            <div className="costright"></div>
+            <div className="costright"><CostMap/></div>
         </div>
     );
 }

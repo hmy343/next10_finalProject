@@ -8,6 +8,7 @@ import '../css/Visitor.css';
 import Pie from '../charts/VisitPie';
 import Sankeyinflow from '../charts/Sankeyinflow';
 import VisitCombo from '../charts/VisitCombo';
+import VisitMap from '../charts/VisitMap';
 
 const Visitor = () => {
     const [chart,setChart] = useState(null)
@@ -48,7 +49,7 @@ const Visitor = () => {
                 <div className="vsankey"><Sankeyinflow data={sankey}/></div>
             </div>
             <div className="visitordown">
-                <div className="vmap"></div>
+                <div className="vmap"><VisitMap /></div>
                 <div className="vfestival"><VisitCombo data={combo}/></div>
             </div>
         </div>

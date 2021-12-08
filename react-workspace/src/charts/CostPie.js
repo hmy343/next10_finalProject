@@ -24,8 +24,9 @@ function CostPie({data1,data2}){
         responsive: true,
         plugins: {
             legend: {
-                position: 'bottom',
-                align : 'center'
+                position: 'right',
+                align : 'center',
+
             },
             subtitle: { // 차트 제목
                 display: true,

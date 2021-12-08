@@ -26,4 +26,12 @@ public class SearchService {
 		return searchDao.ageTd();
 	}
 
+	public List<Search> mainCnt() {
+		return searchDao.mainCnt();
+	}
+
+	public List<Search> latLot() {
+		return searchDao.latLot();
+	}
+
 }
