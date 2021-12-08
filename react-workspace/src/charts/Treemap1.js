@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 import { color } from 'highcharts';
+import '../css/Treemap1.css';
 
 export default function Treemap1({ data, width, height }) {
     const svgRef = useRef(null);
@@ -17,7 +18,7 @@ export default function Treemap1({ data, width, height }) {
         .sum((d) => d.value)
         .sort((a, b) => b.value - a.value);
   
-      const treemapRoot = d3.treemap().size([width, height]).padding(1)(root);
+      const treemapRoot = d3.treemap().size([width, height]).padding(2).paddingInner(3)(root);
   
       const nodes = svg
         .selectAll('g')
@@ -26,7 +27,7 @@ export default function Treemap1({ data, width, height }) {
         .attr('transform', (d) => `translate(${d.x0},${d.y0})`);
   
       const fader = (color) => d3.interpolateRgb(color, '#fff')(0.3);
-      const colorScale = d3.scaleOrdinal(['#aaa','#bbb','#ccc','#ddd','#eee','#fff']);
+      const colorScale = d3.scaleOrdinal(['#aaa','#bbb','#ccc','#ddd','#eee','#fff'].map(fader));
   
       const fontSize = 12;
 
@@ -35,7 +36,6 @@ export default function Treemap1({ data, width, height }) {
       .append('rect')
       .attr('width', (d) => d.x1 - d.x0)
       .attr('height', (d) => d.y1 - d.y0)
-      .attr('backgroundColor',(d)=> color('#323232'))
       .attr('fill', (d) => colorScale(d.data.category));
         // 이름끼리 색맞추기
       nodes
@@ -44,6 +44,7 @@ export default function Treemap1({ data, width, height }) {
         .attr('font-size', `${fontSize}px`)
         .attr('x', 3)
         .attr('y', fontSize)
+        
         // 트리맵에 이름 넣기
       
 
@@ -56,7 +57,7 @@ export default function Treemap1({ data, width, height }) {
   
     return (
       <div>
-        <svg ref={svgRef} />
+        <svg className='treemap' ref={svgRef} />
       </div>
     );
   }

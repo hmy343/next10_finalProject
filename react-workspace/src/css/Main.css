@@ -3,6 +3,10 @@ body {
     overflow-y: hidden;
     
   }
+
+  ul{
+    list-style:none;
+    }
   
   .outer {
     height: 100vh;
@@ -20,6 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 100px;
+    
   }
 
 #mainbox {
@@ -36,7 +41,7 @@ body {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    margin: 0px 5px 10px 10px;
+    margin: 0px 5px 25px 10px;
 }
 
 #mainright{
@@ -44,24 +49,63 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0px 10px 10px 5px;
+    
 }
 
 #indexmap{
    /* border: 2px dotted gray; */
    height: 100%;
+   box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+   
+}
+
+.mainTitle{
+  text-align: center;
+  padding-top: 20px;
+  
+}
+
+.mainTitle > span{
+  font-size: 24px;
+  font-weight: 700;
+  
+  
 }
 
 #visitor{
     background-color: rgb(255, 255, 255);
-    display: flex;
     margin-bottom: 10px;
     height: 25%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+    padding-top: 30px;
+    border-radius: 10px;
+    
+}
+
+.mainTitle > img{
+  width: 60px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  
+}
+
+#visitor > li {
+  padding: 2px;
+  
 }
 
 #cost{
     background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
     height: 25%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+    padding-top: 15px;
+    border-radius: 10px;
+}
+
+#costTotal{
+  font-size: 24px;
+  font-weight: 600;
 }
 
 #search{
@@ -69,9 +113,26 @@ body {
     background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
     height: 25%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+    padding-top: 28px;
+    border-radius: 10px;
 }
+
+#search > li {
+  padding: 2px;
+}
+
 
 #keyword{
     background-color: rgb(255, 255, 255);
     height: 25%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
+    padding-top: 32px;
+    border-radius: 10px;
+}
+
+
+
+li > span {
+  font-size: 12px;
 }

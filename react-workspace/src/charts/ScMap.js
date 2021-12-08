@@ -70,7 +70,7 @@ export default function Map2(){
                         positions={coordinates}                        
                         color='green'                  
                     >
-                    <Tooltip>{guguns[idx]}:{spots[idx]+'개'}</Tooltip>
+                     <Tooltip>{guguns[idx]}:{spots[idx]+'개'}</Tooltip>
                     <Marker position={locations[idx]} icon={icon} >
                        
                        <Popup>
@@ -97,16 +97,20 @@ export default function Map2(){
     }
     return(
         <>
+        <div style={{backgroundColor: "#6495ED"}}>
+           <h4 style={{ padding:5,color:"white", textAlign:"center"}}>주요 관광지 분포(26개 기준)</h4>
+        </div>
             <MapContainer
                 center={center}
                 zoom={10}
-                style={{width: '60vw', height: '43.8vh'}}
+                style={{width: '60vw', height: '38.7vh'}}
             >
                     <TileLayer
                     url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=uCho9mIgWqmJ0Ud5xLcu"
                     attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
                     
                      />
+                 
                 { poly }
             </MapContainer>
         </>

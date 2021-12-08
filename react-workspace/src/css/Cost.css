@@ -23,6 +23,7 @@
     background-color: rgb(255, 255, 255);
     margin: 0px 5px 5px 10px;
     padding-left: 15%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .costarea{
@@ -30,13 +31,14 @@
     background-color: rgb(255, 255, 255);
     margin: 5px 5px 10px 10px;
     height: 40%;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .costuse .chart-container{
     padding: 4% 3% 5% 3%;
     /* border: 2px solid gray; */
     height: 100%;
-    width: 470px;
+    width: 450px;
     /* margin-left: 20px; */
 }
 
@@ -44,5 +46,9 @@
     padding: 4% 3% 10% 3%;
     height: 100%;
     width: 100%;
-    margin-top: 23px;
+    margin-top: 10px;
+}
+
+.costright{
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
