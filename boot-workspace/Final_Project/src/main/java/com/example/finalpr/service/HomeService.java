@@ -25,5 +25,8 @@ public class HomeService {
 	public List<Home> dsRank() {
 		return homeDao.dsRank();
 	}
+	public List<Home> expnRank() {
+		return homeDao.expnRank();
+	}
 
 }

@@ -5,13 +5,13 @@ public class Home {
 	 * tour_ds_nm(관광지명), main_type(), key_word
 	 * max_vstr, min_vstr, expn_total, rank_id, ser_vol
 	 * */
-	private String max_sgg, min_sgg, tour_ds_nm, key_word;
-	private int max_vstr, min_vstr, expn_total, rank_id, rownum, avg_vstr;
+	private String max_sgg, min_sgg, tour_ds_nm, key_word, sgg_nm;
+	private int max_vstr, min_vstr, expn_total, rank_id, rownum, avg_vstr, ratio;
 	public Home() {
 		super();
 	}
 	public Home(String max_sgg, String min_sgg, String tour_ds_nm, String key_word, int max_vstr, int min_vstr,
-			int expn_total, int rank_id, int rownum, int avg_vstr) {
+			int expn_total, int rank_id, int rownum, int avg_vstr, int ratio, String sgg_nm) {
 		super();
 		this.setExpn_total(expn_total);
 		this.setKey_word(key_word);
@@ -23,6 +23,22 @@ public class Home {
 		this.setRownum(rownum);
 		this.setTour_ds_nm(tour_ds_nm);
 		this.setAvg_vstr(avg_vstr);
+		this.setRatio(ratio);
+		this.setSgg_nm(sgg_nm);
+	}
+	
+	
+	public String getSgg_nm() {
+		return sgg_nm;
+	}
+	public void setSgg_nm(String sgg_nm) {
+		this.sgg_nm = sgg_nm;
+	}
+	public int getRatio() {
+		return ratio;
+	}
+	public void setRatio(int ratio) {
+		this.ratio = ratio;
 	}
 	public String getMax_sgg() {
 		return max_sgg;
@@ -90,7 +106,7 @@ public class Home {
 	public String toString() {
 		return "Home [max_sgg=" + max_sgg + ", min_sgg=" + min_sgg + ", tour_ds_nm=" + tour_ds_nm + ", key_word="
 				+ key_word + ", max_vstr=" + max_vstr + ", min_vstr=" + min_vstr + ", expn_total=" + expn_total
-				+ ", rank_id=" + rank_id + ", rownum=" + rownum + "avg_vstr="+ avg_vstr + "]";
+				+ ", rank_id=" + rank_id + ", rownum=" + rownum + "avg_vstr="+ avg_vstr + "ratio" + ratio + "sgg_nm" + sgg_nm + "]";
 	}
 	
 

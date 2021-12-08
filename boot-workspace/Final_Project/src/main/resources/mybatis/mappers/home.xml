@@ -24,4 +24,11 @@
 		FROM DM_DS_SRCH_THR DM, DS_KEYW_CODE KC
 		WHERE DM.KEYW_CD = KC.KEYW_CD
 	</select>
+	
+	<select id="expnRank" resultType="home">
+		SELECT SGG.SGG_NM, DM.RATIO
+		FROM DM_TS_EXPN_RANK DM, SGG_CODE SGG
+		WHERE SGG.SGG_CD = DM.SGG_CD
+		ORDER BY RATIO DESC
+	</select>
 </mapper>

@@ -36,7 +36,7 @@ public class HomeController {
 		vstr_max_min.put("min_vstr", home.getMin_vstr());
 		vstr_max_min.put("avg_vstr", home.getAvg_vstr());
 		
-		json.put("vstr_ma_min", vstr_max_min);
+		json.put("vstr_max_min", vstr_max_min);
 		
 		
 		
@@ -44,10 +44,20 @@ public class HomeController {
 		home = (Home)homeService.expnTotal();
 		json.put("expn_total", home.getExpn_total());
 		
+		JSONArray expn_rank = new JSONArray();
+		List<Home> homeList = (List<Home>)homeService.expnRank();
+		for (Home h:homeList) {
+			JSONObject o = new JSONObject();
+			o.put("sgg_nm", h.getSgg_nm());
+			o.put("ratio", h.getRatio());
+			expn_rank.add(o);
+		}
+		json.put("expn_rank", expn_rank);
+		
 		
 		/* 관광지검색 3위 */
 		JSONArray sr_rank = new JSONArray();
-		List<Home> homeList = (List<Home>)homeService.srRank();
+		homeList = (List<Home>)homeService.srRank();
 		for (Home h:homeList) {
 			JSONObject o = new JSONObject();
 			o.put("rank_id", h.getRank_id());
@@ -68,7 +78,7 @@ public class HomeController {
 		}
 		json.put("ds_rank", ds_rank);
 		
-		System.out.println(json);
+		//System.out.println(json);
 		
 
 		return json.toJSONString();

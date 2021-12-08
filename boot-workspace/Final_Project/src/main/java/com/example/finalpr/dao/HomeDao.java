@@ -19,4 +19,6 @@ public interface HomeDao {
 
 	List<Home> dsRank();
 
+	List<Home> expnRank();
+
 }

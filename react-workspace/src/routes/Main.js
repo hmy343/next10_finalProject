@@ -24,14 +24,16 @@ import { render } from '@testing-library/react';
 
 
 const Main = () => {
-  const [ expn, setExpn ] = useState(0);    // 사용금액
-  const [ vstr, setVstr ] = useState(0);    // 방문객수
-  const [ ds, setDs ] = useState(0);        // 검색 키워드
-  const [ sr, setSr ] = useState(0);        // 관광지검색 (100위)
+  const [ expn, setExpn ] = useState(0);     // 사용금액
+  const [ exsgg, setExsgg ] = useState(0); //사용금액 순위 행정구
+  const [ exrat, setExrat ] = useState(0)  // 사용금액 순위 비율
+  const [ vstr, setVstr ] = useState(0);     // 방문객수
+  const [ ds, setDs ] = useState(0);         // 검색 키워드
+  const [ sr, setSr ] = useState(0);         // 관광지검색 (100위)
   useEffect( async() => {
     const { data } = await axios.get('http://localhost:9797/');
     setExpn(data.expn_total);
-    setVstr(data.vstr_ma_min);
+    setVstr(data.vstr_max_min);
 
     const dsList = [];
     data.ds_rank.map((item)=> {
@@ -44,9 +46,16 @@ const Main = () => {
       srList.push(item.tour_ds_nm);
     });
     setSr(srList);
-    // console.log(data);
-  }, []);
 
+    var exSgg = [];
+    var exRat = [];
+    data.expn_rank.map((item) => {
+      exSgg.push(item.sgg_nm);
+      exRat.push(item.ratio);
+    });
+    setExsgg(exSgg);
+    setExrat(exRat);
+  }, []);
 
   return (
     <div id="mainbox">
@@ -61,6 +70,9 @@ const Main = () => {
         
         <div id="cost">사용금액</div>
         <div>{expn} (억원)</div>
+        <div> {exsgg[0]} : {exrat[0]} (%)</div>
+        <div> {exsgg[1]} : {exrat[1]} (%)</div>
+        <div> {exsgg[2]} : {exrat[2]} (%)</div>
 
         <div id="search">관광지 검색</div>
         <div>{sr[0]}</div>
