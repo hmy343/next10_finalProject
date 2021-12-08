@@ -42,7 +42,7 @@ function AnRadar({d1,d2}){
           },
             subtitle: { // 차트 제목
                 display: true,
-                text: '검색키워드 분포',
+                text: '부산시 관광지수 분포',
                 color: 'black',
                 font: {
                   size: 18,

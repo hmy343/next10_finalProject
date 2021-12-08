@@ -6,29 +6,48 @@
     background-color: #edeef1;
 }
 
-.keywordtop{
+.kwleft{
     display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
     margin: 0px 10px 10px 10px;
     width: 50%;
 }
-.keywordbottom {
+.kwright {
     display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
     margin: 0px 10px 0px 10px;
     width: 50%;
 }
 
-.keywordtop .chart-container{
+.kwleft .chart-container{
     padding: 4% 3% 0 3%;
     width: 420px;
     /* margin-left: 500px; */
 }
 
-.keywordbottom .chart-container{
-    padding: 8% 3% 0 3%;
-    width: 750px;
+.kwright .chart-container{
+    padding: 4% 3% 0 5%;
+    width: 650px;
 }
 
+.kwdonut {
+    height: 50%;
+    /* border: 1px dotted black; */
+    margin-bottom: 5px;
+}
+
+.kwbar {
+    height: 50%;
+}
+
+.kwtable1 {
+    flex-grow: 1;
+}
+
+.kwtable2 {
+    flex-grow: 1;
+}
 
 
