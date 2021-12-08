@@ -109,7 +109,7 @@ function VisitCombo({data}) {
 return (
   <div>
     <div className="chart-container">
-      <Bar data={chartData} option={option}/>
+      <Bar data={chartData} options={option}/>
     </div>
   </div>
 );
