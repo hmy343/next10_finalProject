@@ -84,9 +84,23 @@
 
 .scvup{
     width: 50%;
+    border: 1px dotted black;
 }
 
 .scvdown{
     flex-grow: 1;
+    border: 1px dotted black;
+}
+
+.scvup .chart-container{
+    height: 100%;
+    width: 100%;
+    border: 1px dotted black;
+}
+
+.scvdown .chart-container{
+    /* height: 200px; */
+    width: 100%;
+    border: 1px dotted black;
 }
 

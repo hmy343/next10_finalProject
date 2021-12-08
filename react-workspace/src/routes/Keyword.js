@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import axios from "axios";
 import '../css/Keyword.css';
-import KwRadar from '../charts/KwRadar'
+import KwDonut from '../charts/KwDonut'
 import KwMixedBar from '../charts/KwMixedBar'
 
 const Keyword= () =>{
@@ -26,17 +26,17 @@ const Keyword= () =>{
         const expd_totals = cnp_expd.map(item => item.expd_total)
         
         setChart(
-            makeRadarChart(key_words, rates)
+            makeDonutChart(key_words, rates)
         )
         setChart2(
             makeMixedBar(enp_majors, enps, expd_totals)
         )
     },[]);
 
-    const makeRadarChart = (d1, d2) => {
-        return(<KwRadar data1 = {d1} data2 = {d2}/>)    
+    const makeDonutChart = (d1, d2) => {
+        return(<KwDonut data1 = {d1} data2 = {d2}/>)    
     }
-y
+
     const makeMixedBar = (d1, d2, d3) => {
         return(<KwMixedBar data1 = {d1} data2 = {d2} data3 = {d3}/>)    
     }

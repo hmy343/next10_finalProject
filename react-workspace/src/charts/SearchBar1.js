@@ -3,7 +3,7 @@ import {Bar} from 'react-chartjs-2';
 
 
 function SearchBar1({ data }) {
-
+  const canvasDom = useRef(null);
 
   // 1. 대분류 항목끼리 그룹핑해서 배열로 담기
   const dataArr = Array.from(data);
@@ -31,11 +31,12 @@ function SearchBar1({ data }) {
 
   // 2. 방문자수 뽑아내기
   const vstrArr1 = [];
-    gan1.map(item => { // 자연관광지 방문자수
+  const vstrArr2 = [];
+
+  gan1.map(item => { // 자연관광지 방문자수
     vstrArr1.push(item.vstr_total)
   });
 
-  const vstrArr2 = [];
   gan2.map(item => { // 휴양관광지 방문자수
     vstrArr2.push(item.vstr_total)
   });
@@ -43,25 +44,25 @@ function SearchBar1({ data }) {
   // console.log(vstrArr2);
 
 
-  // 3. 자연관광지_관광지명 뽑아내기
+  // 3. 관광지명 뽑아내기(자연, 휴양)
   const nm1 = [];
+  const nm2 = [];
+
   gan1.map(item => { // 자연관광지 관광지명
     nm1.push(item.tour_ds_nm)
   });
-
-  const nm2 = [];
   gan2.map(item => { // 휴양관광지 관광지명
     nm2.push(item.tour_ds_nm)
   });
-  // console.log(nm1);
-  // console.log(nm2);
-
+  console.log(nm1);
+  console.log(nm2);
  
   // 4. 1,2번 한 배열로 합치기
   const new_vstr1 = vstrArr1.concat(vstrArr2)
-  const new_nm1 = nm1.concat(nm2)
   console.log(new_vstr1)
+  const new_nm1 = nm1.concat(nm2)
   console.log(new_nm1)
+  
 
   // 5. 라벨 뽑아내기 (중복값 제거해서 map => Set)
   let key_word1 = [...new Set(gan1.map(item => item.key_word))];
@@ -69,15 +70,16 @@ function SearchBar1({ data }) {
   console.log(key_word1)
   console.log(key_word2)
 
-  const colors = ['rgb(255, 99, 132)', 'rgb(54, 162, 235)']
+
+  const colors = ['rgb(255, 99, 132)', 'rgb(153, 102, 255)']
+
   const chartData = {
     labels: new_nm1,
     datasets: [
       {
         axis: 'y',
-        // label: key_word1,
         data: new_vstr1,
-        backgroundColor: colors,
+        backgroundColor: [colors[0],colors[0],colors[0],colors[0],colors[0],colors[0],colors[0],colors[0],colors[0],colors[0],colors[1]]
       }
     ],
   }
@@ -88,12 +90,11 @@ function SearchBar1({ data }) {
     responsive: true,
     plugins: {
       legend: { // 범례설정
-        position: 'bottom',
-        align: 'center',
+        display:false
       },
       subtitle: { // 차트 제목
         display: true,
-        text: '부산시 주요관광지 방문자수(자연)',
+        text: '부산시 주요관광지 방문자수(자연, 휴양)',
         color: 'black',
         font: {
           size: 18,

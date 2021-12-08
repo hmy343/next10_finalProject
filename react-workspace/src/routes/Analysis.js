@@ -5,7 +5,7 @@ import React, {
 } from 'react';
 import axios from 'axios';
 import '../css/Analysis.css';
-import Donut from '../charts/Donut';
+import AnRadar from '../charts/AnRadar';
 import StackedBar from "../charts/StackedBar";
 import AnTable from "../charts/AnTable";
 
@@ -28,14 +28,14 @@ const Analysis = () => {
     const rsc_vals = tour_rsc.map(item => item.val);
 
     setChart(
-      makePieChart(sub_indexs,index_kpis)
+      makeRadarChart(sub_indexs,index_kpis)
     )
     setChart2(
       makeStackChart(tour_sgg,infra_vals,effect_vals,rsc_vals)
     )
   },[]);
-  const makePieChart = (d1, d2) => {
-    return(<Donut d1={d1} d2={d2}/>)
+  const makeRadarChart = (d1, d2) => {
+    return(<AnRadar d1={d1} d2={d2}/>)
   }
   const makeStackChart = (d1, d2, d3, d4) => {
     return(<StackedBar d1={d1} d2={d2} d3={d3} d4={d4} />)
