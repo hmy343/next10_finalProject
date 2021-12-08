@@ -23,4 +23,10 @@
 		FROM DM_TS_AGE_TD_VSTR_SL DM, TS_TD_CODE TC
 		WHERE DM.TOUR_DS_CD = TC.TOUR_DS_CD
 	</select>
+	
+	<select id="mainCnt" resultType="search">
+		SELECT DC.KEY_WORD, DM.MAIN_CNT
+		FROM DM_SR_MAIN_CNT DM, DS_KEYW_CODE DC
+		WHERE DM.MAIN_TYPE = DC.KEYW_CD
+	</select>
 </mapper>

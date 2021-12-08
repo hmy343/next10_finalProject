@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.finalpr.service.SearchService;
 import com.example.finalpr.vo.Search;
 
+
 @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 @RestController
 public class SearchController {
@@ -25,19 +26,34 @@ public class SearchController {
 		JSONObject json = new JSONObject();
 		
 		
-		// 관광지 검색 순위 분포 (도넛)
-		JSONArray sub_cnt = new JSONArray();
-		List<Search> searchList = (List<Search>)searchService.subCnt();
+		// 관광지 검색 순위 분포 (버블 다이어그램)
+//		JSONArray sub_cnt = new JSONArray();
+//		List<Search> searchList = (List<Search>)searchService.subCnt();
+//		//System.out.println(searchList);
+//		for (Search s:searchList) {
+//			JSONObject o = new JSONObject();
+//			o.put("main_type", s.getKey_word());
+//			o.put("sub_type", s.getSr_sub_type());
+//			o.put("search_cnt", s.getSub_cnt());
+//			sub_cnt.add(o);
+//		}
+//		
+//		json.put("sub_cnt", sub_cnt);
+		
+		// 관광지 검색 순위 분포 (도넛으로 변경됨)
+		
+		JSONArray main_cnt = new JSONArray();
+		List<Search> searchList = (List<Search>)searchService.mainCnt();
 		//System.out.println(searchList);
 		for (Search s:searchList) {
 			JSONObject o = new JSONObject();
 			o.put("main_type", s.getKey_word());
-			o.put("sub_type", s.getSr_sub_type());
-			o.put("search_cnt", s.getSub_cnt());
-			sub_cnt.add(o);
+			o.put("search_cnt", s.getMain_cnt());
+			main_cnt.add(o);
 		}
 		
-		json.put("sub_cnt", sub_cnt);
+		json.put("main_cnt", main_cnt);
+		//System.out.println(main_cnt);
 
 		
 		// 주요 관광지 총 방문자수(막대)
@@ -65,7 +81,7 @@ public class SearchController {
 			o.put("value", s.getVstr_total());
 			age_td_vstr.add(o);
 		}
-		
+		//System.out.println(age_td_vstr);
 		json.put("age_td_vstr", age_td_vstr);
 		
 		

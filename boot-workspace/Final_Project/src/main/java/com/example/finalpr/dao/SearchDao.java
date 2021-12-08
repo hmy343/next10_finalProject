@@ -17,4 +17,6 @@ public interface SearchDao {
 
 	List<Search> ageTd();
 
+	List<Search> mainCnt();
+
 }
