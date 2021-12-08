@@ -21,16 +21,19 @@ import L from 'leaflet';
 
 
 const center = [35.18677932512122, 129.11274781616942];
-const marker = [35.18344111342029,129.11682107120114];
 // const icon = L.icon({iconUrl:img, iconSize:[20,20] });
-// const point=[[129.0323071781523,
-//     35.11642681309375],[129.03225241229467,
-//         35.116443502545195],[129.03216713785164,
-//             35.11651532668207]]
 
 function getColor(d) {
-    return d = "#fff";
-  }
+    return d > 2.0 ? '#FF0093' :
+    d > 1.5 ? '#FF2993' :
+        d > 1.1 ? '#FF3F93' :
+            d > 1 ? '#FF6193' :
+                d > 0.8 ? '#FF9393' :
+                    d > 0.7 ? '#FFA893' :
+                        d > 0.6 ? '#FFBF93' :
+                            d > 0.5 ? '#FFD893' :
+                                        '#FFE793';
+}
 
 export default function Map2(){
     const [poly, setPoly] = useState(null)
@@ -92,12 +95,6 @@ export default function Map2(){
                     attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
                     
                      />
-                    {/* <Marker position={marker}> */}
-                       
-                        {/* <Popup>
-                            hihihi
-                        </Popup> */}
-                    {/* </Marker> */}
                 { poly }
             </MapContainer>
         </>
