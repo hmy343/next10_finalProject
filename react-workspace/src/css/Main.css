@@ -1,45 +1,77 @@
-.mainbox {
+body {
+    margin: 0;
+    overflow-y: hidden;
+    
+  }
+  
+  .outer {
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  /* 화면에서 스크롤바 안보이게 */
+  .outer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .inner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+#mainbox {
     display:flex;
-    height: 780px;
+    height: 900px;
+    padding: 40px;
+    padding-top: 30px;
+    background-color: #edeef1;
+    
 }
 
-.mainleft {
+#mainleft {
     width: 70%;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     margin: 0px 5px 10px 10px;
 }
 
-.mainright{
+#mainright{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     margin: 0px 10px 10px 5px;
 }
 
-.indexmap{
+#indexmap{
    /* border: 2px dotted gray; */
    height: 100%;
 }
 
-.visitor{
-    background-color: limegreen;
+#visitor{
+    background-color: rgb(255, 255, 255);
     display: flex;
     margin-bottom: 10px;
+    height: 25%;
 }
 
-.cost{
-    background-color: lightskyblue;
+#cost{
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    height: 25%;
 }
 
-.search{
+#search{
 
-    background-color: rgb(200, 250, 135);
+    background-color: rgb(255, 255, 255);
     margin-bottom: 10px;
+    height: 25%;
 }
 
-.keyword{
-    background-color: rgb(251, 184, 187);
+#keyword{
+    background-color: rgb(255, 255, 255);
+    height: 25%;
 }

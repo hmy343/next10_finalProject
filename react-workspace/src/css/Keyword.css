@@ -1,36 +1,32 @@
 .keyword{
     display:flex;
-    height: 960px;
-    flex-direction: column;
+    height: 900px;
+    padding: 40px;
+    padding-top: 30px;
+    background-color: #edeef1;
 }
 
 .keywordtop{
-    height:45%;
     display: flex;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
     margin: 0px 10px 10px 10px;
-    padding-left: 35%
+    width: 50%;
 }
 .keywordbottom {
-    height:55%;
     display: flex;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
     margin: 0px 10px 0px 10px;
-    padding-left: 27%
+    width: 50%;
 }
 
 .keywordtop .chart-container{
     padding: 4% 3% 0 3%;
-    border: 1px dotted gray;
-    height: 100%;
     width: 420px;
     /* margin-left: 500px; */
 }
 
 .keywordbottom .chart-container{
     padding: 8% 3% 0 3%;
-    border: 1px dotted gray;
-    height: 100%;
     width: 750px;
 }
 

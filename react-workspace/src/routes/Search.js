@@ -8,6 +8,7 @@ import '../css/Search.css';
 import ScTreemap from '../charts/ScTreemap'
 import SearchBar from '../charts/SearchBar';
 import ScDonut from "../charts/ScDonut";
+import ScMap from "../charts/ScMap";
 import Table from 'react-bootstrap/Table'
 
 const Search= () =>{
@@ -43,9 +44,8 @@ const Search= () =>{
             <div className="scup">
                 <div className="scrank">
                     <div className="scdonut"><ScDonut/></div>
-                    <div className="sctable"><Table/></div>
                 </div>
-                <div className="scmap"></div>
+                <div className="scmap"><ScMap /></div>
             </div>
             <div className="scdown">
                 <div className="scvisitors">{chart2}</div>

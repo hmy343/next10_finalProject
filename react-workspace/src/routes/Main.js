@@ -1,17 +1,18 @@
 import React from 'react';
 import "../css/Main.css";
+import MainMap from '../charts/MainMap';
 
 function Main() {
   return (
-    <div className="mainbox">
-      <div className="mainleft">
-        <div className="indexmap">관광지수 지도</div>
+    <div id="mainbox">
+      <div id="mainleft">
+        <div id="indexmap"><MainMap/></div>
       </div>
-      <div className="mainright">
-        <div className="visitor">방문자수</div>
-        <div className="cost">사용금액</div>
-        <div className="search">관광지 검색</div>
-        <div className="keyword">검색 키워드</div>
+      <div id="mainright">
+        <div id="visitor">방문자수</div>
+        <div id="cost">사용금액</div>
+        <div id="search">관광지 검색</div>
+        <div id="keyword">검색 키워드</div>
       </div>
     </div>
   );

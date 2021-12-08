@@ -5,7 +5,6 @@ import React,{useRef} from 'react';
 
 function VisitPie({d1,d2}){
   const canvasDom = useRef(null);
-  console.log(d2);
   const colors = ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(255, 205, 86)','rgb(75, 192, 192)','rgb(54, 162, 235)','rgb(153, 102, 255)', 'rgb(201, 203, 207)']
   useEffect(()=>{
     const ctx =canvasDom.current.getContext("2d");
@@ -25,19 +24,19 @@ function VisitPie({d1,d2}){
         responsive: true,
         plugins: {
             legend: {
-                position: 'bottom',
+                position: 'right',
                 align : 'center'
             },
             subtitle: { // 차트 제목
                 display: true,
-                text: '용도별 관광지출 분포',
+                text: '유입경로 분포',
                 color: 'black',
                 font: {
                   size: 18,
                   weight: 'bold',
                 },
                 padding: {
-                  bottom: 20
+                  bottom: 10
                 },
             },          
         },

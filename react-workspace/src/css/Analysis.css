@@ -1,12 +1,15 @@
 .analysis {
-    display:flex;
-    height: 960px;
+    height: 900px;
     flex-direction: column;
+    padding: 40px;
+    padding-top: 30px;
+    background-color: #edeef1;
+    overflow: hidden;
+    display: flex;
 }
 
 .analysisup {
     height:50%;
-    /* background-color: lightgray; */
     display: flex;
 }
 
@@ -14,7 +17,7 @@
     flex-grow: 1;
     height:50%;
     margin: 0px 10px 10px 10px;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
 }
 /* #donut{
     vertical-align: middle;
@@ -23,7 +26,7 @@
 .indexpie {
     margin: 0px 5px 10px 10px;
     width: 25%;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
     vertical-align: middle;
 }
 
@@ -31,17 +34,18 @@
 .middle {
     margin: 0px 10px 10px 5px;
     width:80%;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(255, 255, 255);
 }
 
 .indexpie .chart-container{
-    padding-top: 5%;
+    padding: 50px;
+    padding-top: 28px;
 }
 
 .middle .chart-container{
-    padding-top: 7%;
     padding-right: 40px;
     padding-left: 20px;
+    padding-top: 25px;
 }
 
 .middle .chart-container canvas{

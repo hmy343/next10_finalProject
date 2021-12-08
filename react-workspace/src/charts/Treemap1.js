@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import { color } from 'highcharts';
 
 export default function Treemap1({ data, width, height }) {
     const svgRef = useRef(null);
@@ -25,7 +26,7 @@ export default function Treemap1({ data, width, height }) {
         .attr('transform', (d) => `translate(${d.x0},${d.y0})`);
   
       const fader = (color) => d3.interpolateRgb(color, '#fff')(0.3);
-      const colorScale = d3.scaleOrdinal(d3.schemeCategory10.map(fader));
+      const colorScale = d3.scaleOrdinal(['#aaa','#bbb','#ccc','#ddd','#eee','#fff']);
   
       const fontSize = 12;
 
@@ -34,7 +35,8 @@ export default function Treemap1({ data, width, height }) {
       .append('rect')
       .attr('width', (d) => d.x1 - d.x0)
       .attr('height', (d) => d.y1 - d.y0)
-      .attr('fill', (d) => colorScale(d.data.name));
+      .attr('backgroundColor',(d)=> color('#323232'))
+      .attr('fill', (d) => colorScale(d.data.category));
         // 이름끼리 색맞추기
       nodes
         .append('text')        
