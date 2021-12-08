@@ -85,6 +85,23 @@ public class SearchController {
 		json.put("age_td_vstr", age_td_vstr);
 		
 		
+		
+		// 주요 관광지 분포 (지도)
+		JSONArray td_lat_lot = new JSONArray();
+		searchList = (List<Search>)searchService.latLot();
+		for (Search s:searchList) {
+			JSONObject o = new JSONObject();
+			o.put("main_type", s.getKey_word());
+			o.put("tour_ds_nm", s.getTour_ds_nm());
+			o.put("lat", s.getLat());
+			o.put("lot", s.getLot());
+			td_lat_lot.add(o);
+		}
+		//System.out.println(td_lat_lot);
+		
+		json.put("td_lat_lot", td_lat_lot);
+		
+		//System.out.println(json);
 		return json.toJSONString();
 	}
 

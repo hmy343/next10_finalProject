@@ -11,6 +11,7 @@ public class Search {
 	 * */
 	private String key_word, sr_sub_type, tour_ds_nm;
 	private int sub_cnt, vstr_total, age, main_cnt;
+	private float lat, lot;
 	
 	
 	public Search() {
@@ -18,7 +19,7 @@ public class Search {
 	}
 
 
-	public Search(String key_word, String sr_sub_type, String tour_ds_nm, int sub_cnt, int vstr_total, int age, int main_cnt) {
+	public Search(String key_word, String sr_sub_type, String tour_ds_nm, int sub_cnt, int vstr_total, int age, int main_cnt, float lat, float lot ) {
 		super();
 		this.setKey_word(key_word);
 		this.setSr_sub_type(sr_sub_type);
@@ -27,10 +28,29 @@ public class Search {
 		this.setVstr_total(vstr_total);
 		this.setAge(age);
 		this.setMain_cnt(main_cnt);
-		
+		this.setLat(lat);
+		this.setLot(lot);
 	}
 	
-	
+
+	public float getLat() {
+		return lat;
+	}
+
+
+	public void setLat(float lat) {
+		this.lat = lat;
+	}
+
+
+	public float getLot() {
+		return lot;
+	}
+
+
+	public void setLot(float lot) {
+		this.lot = lot;
+	}
 
 
 	public int getMain_cnt() {
@@ -106,7 +126,8 @@ public class Search {
 	@Override
 	public String toString() {
 		return "Search [key_word=" + key_word + ", sr_sub_type=" + sr_sub_type + ", tour_ds_nm=" + tour_ds_nm
-				+ ", sub_cnt=" + sub_cnt + ", vstr_total=" + vstr_total + ", age=" + age + ", main_cnt=" + main_cnt +"]";
+				+ ", sub_cnt=" + sub_cnt + ", vstr_total=" + vstr_total + ", age=" + age + ", main_cnt=" + main_cnt
+				+ ", lat="+ lat + ", lot=" + lot + "]";
 	}
 
 	

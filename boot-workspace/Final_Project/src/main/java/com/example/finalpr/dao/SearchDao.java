@@ -19,4 +19,6 @@ public interface SearchDao {
 
 	List<Search> mainCnt();
 
+	List<Search> latLot();
+
 }

@@ -30,4 +30,8 @@ public class SearchService {
 		return searchDao.mainCnt();
 	}
 
+	public List<Search> latLot() {
+		return searchDao.latLot();
+	}
+
 }
