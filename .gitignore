@@ -21,3 +21,7 @@ react-workspace/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+react-workspace/package-lock.json
+react-workspace/package.json
+*.json
+react-workspace/package-lock.json

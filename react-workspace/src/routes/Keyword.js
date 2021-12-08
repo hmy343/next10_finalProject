@@ -36,7 +36,7 @@ const Keyword= () =>{
     const makeRadarChart = (d1, d2) => {
         return(<KwRadar data1 = {d1} data2 = {d2}/>)    
     }
-
+y
     const makeMixedBar = (d1, d2, d3) => {
         return(<KwMixedBar data1 = {d1} data2 = {d2} data3 = {d3}/>)    
     }
