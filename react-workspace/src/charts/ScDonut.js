@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React,{useRef} from 'react';
 
 
-function ScDonut(){
+function ScDonut({d1, d2}){
   const canvasDom = useRef(null);
   const colors = ['rgb(255, 99, 132)','rgb(255, 159, 64)','rgb(153, 102, 255)', 'rgb(201, 203, 207)']
   const data=[17,5,5,13]
@@ -12,11 +12,11 @@ function ScDonut(){
     new Chart(ctx,{
       type: "doughnut",
       data:{
-        labels:['자연관광지','역사관광지','휴양관광지','기타관광지'],
+        labels:d1,
         datasets:[
           {
             label:'data',
-            data:data,
+            data:d2,
             backgroundColor: colors,
           },
         ],

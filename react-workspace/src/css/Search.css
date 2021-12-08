@@ -57,6 +57,7 @@
     width: 50%;
     background-color: rgb(255, 255, 255);
     margin: 5px 5px 10px 10px;
+    display:flex;
 }
 
 .scvisitors .chart-container{
@@ -80,3 +81,12 @@
     /* height: 30%; */
     width: 500px;
 }
+
+.scvup{
+    width: 50%;
+}
+
+.scvdown{
+    flex-grow: 1;
+}
+
