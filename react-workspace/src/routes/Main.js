@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../css/Main.css";
 import MainMap from '../charts/MainMap';
+import axios from 'axios';
 
-function Main() {
+// function Main() {
+
+
+//   return (
+//     <div id="mainbox">
+//       <div id="mainleft">
+//         <div id="indexmap"><MainMap/></div>
+//       </div>
+//       <div id="mainright">
+//         <div id="visitor">방문자수</div>
+//         <div id="cost">사용금액</div>
+//         <div id="search">관광지 검색</div>
+//         <div id="keyword">검색 키워드</div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+const Main = () => {
+
+  useEffect( async() => {
+    const { data } = await axios.get('http://localhost:9797/');
+    console.log(data);
+  });
+  
+  
   return (
     <div id="mainbox">
       <div id="mainleft">

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finalpr.dao.HomeDao">
+	<select id = "vstrMax" resultType="home">
+		SELECT SGG1.SGG_NM AS MAX_SGG, DM.MAX_VSTR, SGG2.SGG_NM AS MIN_SGG, DM.MIN_VSTR, DM.AVG_VSTR
+		FROM DM_SGG_VSTR_MAX_MIN DM, SGG_CODE SGG1, SGG_CODE SGG2
+		WHERE SGG1.SGG_CD = DM.MAX_SGG AND SGG2.SGG_CD = DM.MIN_SGG
+	</select>
+	
+	<select id = "expnTotal" resultType="home">
+		SELECT RTRIM(TRUNC(SUM(EXPN_TOTAL), -8), '0') AS EXPN_TOTAL
+		FROM DM_TS_SGG_EXPN
+	</select>
+	
+	<select id="srRank" resultType="home">
+		SELECT RANK_ID, TOUR_DS_NM
+		FROM DM_SR_TD_LIST_THR
+	</select>
+	
+	<select id="dsRank" resultType="home">
+		SELECT KC.KEY_WORD, ROWNUM
+		FROM DM_DS_SRCH_THR DM, DS_KEYW_CODE KC
+		WHERE DM.KEYW_CD = KC.KEYW_CD
+	</select>
+</mapper>
