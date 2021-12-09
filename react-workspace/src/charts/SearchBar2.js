@@ -71,7 +71,7 @@ function SearchBar2({ data }) {
   console.log(key_word4)
 
 
-  const colors = ['rgb(255, 159, 64)', 'rgb(201, 203, 207)']
+  const colors = ['rgb(201, 203, 207)','rgb(255, 159, 64)' ]
 
   const chartData = {
     labels: new_nm2,
