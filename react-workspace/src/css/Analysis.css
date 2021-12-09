@@ -18,6 +18,7 @@
     height:50%;
     margin: 0px 10px 10px 10px;
     background-color: rgb(255, 255, 255);
+    
 }
 /* #donut{
     vertical-align: middle;
@@ -28,6 +29,7 @@
     width: 25%;
     background-color: rgb(255, 255, 255);
     vertical-align: middle;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 
@@ -35,6 +37,7 @@
     margin: 0px 10px 10px 5px;
     width:80%;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .indexpie .chart-container{
@@ -52,3 +55,4 @@
     height: 300px;
     width: 700px;
 } 
+

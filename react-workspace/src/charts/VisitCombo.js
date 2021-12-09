@@ -59,7 +59,7 @@ function VisitCombo({data}) {
       },
       subtitle: { // 차트 제목
         display: true,
-        text: '부산시 월별 방문자 수 및 축제 건수',
+        text: '월별 방문자 수 및 축제 건수 비교',
         color: 'black',
         font: {
           size: 18,

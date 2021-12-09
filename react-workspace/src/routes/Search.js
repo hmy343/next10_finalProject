@@ -9,8 +9,9 @@ import ScDonut from "../charts/ScDonut";
 import SearchBar1 from '../charts/SearchBar1';
 import SearchBar2 from '../charts/SearchBar2';
 import ScMap from "../charts/ScMap";
-import ScTreemap from '../charts/ScTreemap'
+import ScTreemap from '../charts/ScTreemap';
 // import Table from 'react-bootstrap/Table'
+import img from '../img/scmap.png';
 
 const Search= () =>{
     const [chart, setChart] = useState(null)
@@ -48,7 +49,6 @@ const Search= () =>{
             <div className="scup">
                 <div className="scrank">
                     <div className="scdonut">{chart}</div>
-                    <div className="scdonut"></div>
                 </div>
                 <div className="scmap"><ScMap /></div>
             </div>
@@ -57,7 +57,9 @@ const Search= () =>{
                     <div className="scvup"><SearchBar1 data={bar} /></div>
                     <div className="scvdown"><SearchBar2 data={bar} /></div>                 
                 </div>
-                <div className="scage"><ScTreemap/></div>
+                <div className="scage"><ScTreemap/><img src={img} alt="범례" style={{width:"180px", position:"absolute", top:"260px", right:'-10px'}}/>
+                     <p style={{position:"absolute", top:"470px", right:'90px', fontSize:'12px'}}>단위 : 개</p>
+                </div>
             </div>
         </div>
     );

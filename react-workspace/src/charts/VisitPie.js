@@ -29,7 +29,7 @@ function VisitPie({d1,d2}){
             },
             subtitle: { // 차트 제목
                 display: true,
-                text: '유입경로 분포',
+                text: '관광객 유입경로 분포',
                 color: 'black',
                 font: {
                   size: 18,

@@ -8,6 +8,7 @@ import '../css/Cost.css';
 import CostPie from '../charts/CostPie'
 import CostMixedBar from '../charts/CostMixedBar'
 import CostMap from '../charts/CostMap';
+import img from '../img/costmap.png';
 
 const Cost = () => {
     const [chart, setChart] = useState(null)
@@ -47,7 +48,9 @@ const Cost = () => {
                 <div className="costuse">{chart}</div>
                 <div className="costarea">{chart2}</div>
             </div>
-            <div className="costright"><CostMap/></div>
+            <div className="costright"><CostMap/><img src={img} alt="범례" style={{width:"700px", position:"absolute", bottom:"20px", right:'60px'}}/>
+                 <p style={{position:"absolute", bottom:"43px", right:'70px', fontSize:'12px'}}>단위 : 원</p>
+            </div>
         </div>
     );
 }

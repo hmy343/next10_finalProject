@@ -30,7 +30,7 @@ function CostPie({data1,data2}){
             },
             subtitle: { // 차트 제목
                 display: true,
-                text: '용도별 관광지출 분포',
+                text: '업종별 관광지출액',
                 color: 'black',
                 font: {
                   size: 18,

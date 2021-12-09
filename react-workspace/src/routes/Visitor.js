@@ -9,6 +9,7 @@ import Pie from '../charts/VisitPie';
 import Sankeyinflow from '../charts/Sankeyinflow';
 import VisitCombo from '../charts/VisitCombo';
 import VisitMap from '../charts/VisitMap';
+import img from '../img/visitmap.png';
 
 const Visitor = () => {
     const [chart,setChart] = useState(null)
@@ -49,7 +50,8 @@ const Visitor = () => {
                 <div className="vsankey"><Sankeyinflow data={sankey}/></div>
             </div>
             <div className="visitordown">
-                <div className="vmap"><VisitMap /></div>
+                <div className="vmap"><VisitMap /><img src={img} alt="범례" style={{width:"150px", position:"absolute", bottom:"20px", right:'920px'}}/>
+                    <p style={{position:"absolute", bottom:"0px", right:'990px', fontSize:'12px'}}>단위 : 만명</p></div>
                 <div className="vfestival"><VisitCombo data={combo}/></div>
             </div>
         </div>

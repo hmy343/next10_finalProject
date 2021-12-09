@@ -15,7 +15,7 @@ function KwMixedBar({data1,data2,data3}) {
     datasets: [
       {
         type: "bar",
-        label: '관광 사업체 현황',
+        label: '관광 사업체',
         data: datacnp,
         backgroundColor: colors[0],
         yAxisID: 'y'
@@ -46,7 +46,7 @@ function KwMixedBar({data1,data2,data3}) {
           },
           subtitle: { // 차트 제목
             display: true,
-            text: '부산시 관광사업체 및 관광지출액 현황',
+            text: '관광 사업체 및 관광지출액 현황',
             color: 'black',
             font: {
               size: 18,

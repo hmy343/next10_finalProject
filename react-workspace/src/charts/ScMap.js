@@ -144,13 +144,13 @@ export default function Map2(){
     }
     return(
         <>
-        <div style={{backgroundColor: "#6495ED"}}>
-           <h4 style={{ padding:5,color:"white", textAlign:"center"}}>주요 관광지 분포(26개 기준)</h4>
+        <div style={{backgroundColor: "#535DA9"}}>
+           <h4 style={{ padding:5,color:"white", textAlign:"center"}}>구별 주요 관광지 분포</h4>
         </div>
             <MapContainer
                 center={center}
                 zoom={10}
-                style={{width: '60vw', height: '38.7vh'}}
+                style={{width: '50vw', height: '38.7vh'}}
             >
                     <TileLayer
                     url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=uCho9mIgWqmJ0Ud5xLcu"

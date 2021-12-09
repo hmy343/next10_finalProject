@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
+import '../css/Treemap1.css';
 
 
 export default function Treemap1({ data, width, height }) {
@@ -32,8 +33,8 @@ export default function Treemap1({ data, width, height }) {
       .attr('transform', (d) => `translate(${d.x0},${d.y0})`);
 
 
-    const fader = (color) => d3.interpolateRgb(color, '#fff')(0.3);
-    const colorScale = d3.scaleOrdinal(["#01579b", "#0277bd", "#039be5", "#29b6f6", "#81d4fa", '#e1f5fe'].map(fader));
+    const fader = (color) => d3.interpolateRgb(color, '#fff')(0.4);
+    const colorScale = d3.scaleOrdinal(['#3F51B5', "#5C6BC0", "#7986CB","#9FA8DA","#C5CAE9", "#E8EAF6" ].map(fader));
     // const colorS = d3.scaleOrdinal(['	#FF0000'])
     const fontSize = 12;
 
@@ -140,6 +141,7 @@ export default function Treemap1({ data, width, height }) {
 
   return (
     <div>
+      <div id ='treeTitle'>연령대별 주요 관광지 방문객 수</div>
       <svg className='treemap' ref={svgRef} />
       <svg className='treemapCt' ref={legendRef} />
       

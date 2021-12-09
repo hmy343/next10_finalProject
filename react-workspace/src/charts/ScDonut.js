@@ -33,15 +33,15 @@ function ScDonut({d1, d2}){
             },
             subtitle: { // 차트 제목
                 display: true,
-                text: '부산시 관광지 검색순위 분포',
+                text: '주요 관광지(26개) 유형 분포',
                 color: 'black',
                 font: {
                   size: 18,
                   weight: 'bold',
                 },
-                // padding: {
-                //   bottom: -50
-                // },
+                padding: {
+                  bottom: -100
+                },
             },          
         },
       }

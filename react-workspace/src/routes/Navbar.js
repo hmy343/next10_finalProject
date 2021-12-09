@@ -1,12 +1,13 @@
 import React from 'react';
 import '../css/Navbar.css';
+import logo from '../img/logo.png'
 
 function Navbar() {
     return (
         <>    
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/">BTS</a>
+                    <a class="navbar-brand" href="/"><img src ={logo} /></a>
                     <button class="navbar-toggler" type="button">
                         <span class="navbar-toggler-icon"></span>
                     </button>

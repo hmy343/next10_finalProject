@@ -5,11 +5,13 @@
     padding: 40px;
     padding-top: 30px;
     background-color: #edeef1;
+    
 }
 
 .scup{
     height: 50%;
     display: flex;
+    
 }
 
 .scdown{
@@ -22,11 +24,13 @@
     width: 40%;
     background-color: rgb(255, 255, 255);
     margin: 0px 5px 5px 10px;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .scdonut{
-    width: 80%;
+    width: 85%;
     height: 100%;
+    padding-left: 80px;
     /* background-color: rgb(255, 255, 225); */
  }
 
@@ -34,8 +38,8 @@
     /* margin-top: 20%; */
     width: 90%;
     height: 100px;
-    padding-left: 150px;
-    padding-top: 20px;
+    padding-left: 120px;
+    padding-top: 50px;
 }
 
 
@@ -44,6 +48,7 @@
     flex-grow: 1;
     background-color: rgb(255, 255, 255);
     margin: 0px 10px 5px 5px;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 /* .sc_map .chart-container{
@@ -58,14 +63,15 @@
     background-color: rgb(255, 255, 255);
     margin: 5px 5px 10px 10px;
     display:flex;
+    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .scvisitors .chart-container{
-    padding: 3% 2% 0 2%;
+    padding: 3% 2% 2% 2%;
     /* border: 1px dotted gray; */
     width: 80%;
     /* height: 70%; */
-    margin-left: -2%;
+    /* margin-left: -2%; */
 }
 
 .scage{
@@ -84,23 +90,27 @@
 
 .scvup{
     width: 50%;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
+    
 }
 
 .scvdown{
     flex-grow: 1;
-    border: 1px dotted black;
+    border-left: 2px solid #EDEEF1;
+    /* border: 1px dotted black; */
+    
 }
 
 .scvup .chart-container{
     height: 100%;
     width: 100%;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
+    padding-top: 110px;
 }
 
 .scvdown .chart-container{
     /* height: 200px; */
     width: 100%;
-    border: 1px dotted black;
+    padding-top: 110px;
 }
 

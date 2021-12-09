@@ -33,7 +33,7 @@ function KwDonut({data1,data2}){
             },
             subtitle: { // 차트 제목
                 display: true,
-                text: '부산시 관광지수 분포',
+                text: '관광 키워드 검색 비율',
                 color: 'black',
                 font: {
                   size: 18,

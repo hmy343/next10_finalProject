@@ -6,11 +6,13 @@ import React, {
 import {
     MapContainer,
     TileLayer,
-    Polygon,   
+    Polygon,
+    Tooltip   
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { statesData } from "../data/data2";
 // import '../css/Map2.css';
+import img from '../img/costmap.png';
 
 const center = [35.19020298251348, 129.06939532398673];
 const marker = [129.11682107120114,35.18344111342029]
@@ -29,6 +31,7 @@ export default function CostMap(){
     const [poly, setPoly] = useState(null)
     // const [poly2, setPoly] = useState(null)
     useEffect( ()=>{
+        const guguns = statesData.features.map(item => item.properties.SIG_KOR_NM)
         const costs = statesData.features.map( item => item.properties.cost ); 
         console.log(costs)
         let tmp = statesData.features.map((state, idx) => {
@@ -39,6 +42,8 @@ export default function CostMap(){
         
             console.log(  idx , getColor(costs[idx]), costs[idx])
             return (
+
+                
                 <Polygon
                     pathOptions={{
                         fill:true,
@@ -50,7 +55,11 @@ export default function CostMap(){
                     }}
                     positions={coordinates}
                     
-                />
+                >
+                    
+                <Tooltip>{guguns[idx]}:{costs[idx]+"원"}</Tooltip>
+                </Polygon>
+                // <img src="../img/costmap.png" alt="범례" style={{position:"absolute"}} />
             )
         })
         console.log( 'tmp', tmp.length )
@@ -68,10 +77,13 @@ export default function CostMap(){
     }
     return(
         <>
+        <div style={{backgroundColor: "#535DA9"}}>
+            <h4 style={{ padding:10,color:"white", textAlign:"center"}}>구별 1인당 소비금액</h4>
+        </div>
             <MapContainer
                 center={center}
                 zoom={11}
-                style={{width: '60vw', height: '87.5vh'}}
+                style={{width: '60vw', height: '76vh'}}
             >
                     <TileLayer
                     url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=uCho9mIgWqmJ0Ud5xLcu"
@@ -84,9 +96,11 @@ export default function CostMap(){
                         </Popup>
                         
                     </Marker> */}
-
+                
                 { poly }
+                
             </MapContainer>
+            
         </>
     );
 }

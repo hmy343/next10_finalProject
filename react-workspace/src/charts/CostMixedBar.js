@@ -21,14 +21,15 @@ function CostMixedBar({data1,data2,data3}){
             data:data2,
             borderWidth:1,
             barPercentage:0.7,
-            backgroundColor: [ 'red' ],
+            backgroundColor: [ '#ff4081' ],
             yAxisID: 'y'           
           },
           {
-            label:'사용금액',
+            label:'관광지출액',
             data:data3,
             borderWidth:1,
             barPercentage:0.7,
+            backgroundColor: [ '#536DFE' ],
             yAxisID: 'y_sub'
           },
         ],
@@ -45,14 +46,14 @@ function CostMixedBar({data1,data2,data3}){
           },
           subtitle: { // 차트 제목
             display: true,
-            text: '부산시 관광사업체 및 관광지출액 현황',
+            text: '구별 방문자수 및 관광지출액',
             color: 'black',
             font: {
               size: 18,
               weight: 'bold',
             },
             padding: {
-              bottom: 40
+              bottom: 30
             }
           }
         },
@@ -68,7 +69,7 @@ function CostMixedBar({data1,data2,data3}){
             title: {
               display: true,
               align: 'end',
-              text: '단위: 명'
+              text: '단위: 만명'
             },
             grid: {
               display: false
@@ -97,7 +98,7 @@ function CostMixedBar({data1,data2,data3}){
   return(
     <div>
       <div className="chart-container">
-        <canvas ref={canvasDom} height="180"></canvas>
+        <canvas ref={canvasDom} height="160"></canvas>
       </div>
     </div>
   );
