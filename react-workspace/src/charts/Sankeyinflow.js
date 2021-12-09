@@ -54,9 +54,6 @@ function Sankeyinflow({data}) {
 
   return (
     <div className="App">
-      {/* <div style={{backgroundColor: "#6495ED"}}>
-            <h4 style={{ padding:10, color:"white", textAlign:"center"}}>방문지역별 관광지 분석</h4>
-        </div> */}
       <HighchartsReact
         highcharts={Highcharts}
         options={chartOption}

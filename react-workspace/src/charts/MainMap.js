@@ -61,7 +61,7 @@ export default function Map2(){
                             dashArray:3
                         }}
                         positions={coordinates}                        
-                        color='#585858'                  
+                        color='green'                  
                     >
                     {/* <Tooltip permanent>{guguns[idx]}</Tooltip> */}
                     <Tooltip>{guguns[idx]}:{jisus[idx]}</Tooltip>
@@ -85,25 +85,16 @@ export default function Map2(){
     }
     return(
         <>
-        <div style={{backgroundColor: "#6495ED"}}>
-            <h4 style={{ padding:10,color:"white", textAlign:"center"}}>부산시 관광지수지도</h4>
-        </div>
             <MapContainer
                 center={center}
                 zoom={11}
-                style={{width: '67.1vw', height: '79.8vh'}}
+                style={{width: '67.1vw', height: '87.5vh'}}
             >
                     <TileLayer
                     url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=uCho9mIgWqmJ0Ud5xLcu"
                     attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
                     
                      />
-                    {/* <Marker position={marker}> */}
-                       
-                        {/* <Popup>
-                            hihihi
-                        </Popup> */}
-                    {/* </Marker> */}
                 { poly }
             </MapContainer>
         </>

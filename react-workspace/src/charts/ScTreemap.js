@@ -21,7 +21,7 @@ function ScTreemap() {
   }, []);
   return (
     <div className="App">
-      <Treemap data={data} height={400} width={890} />
+      <Treemap data={data} height={360} width={890} />
     </div>
   );
 }

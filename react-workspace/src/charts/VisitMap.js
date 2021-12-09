@@ -41,7 +41,6 @@ export default function VisitMap() {
 
             console.log(idx, getColor(vstrSl[idx]), vstrSl[idx])
             return (
-                
                 <Polygon
                     pathOptions={{
                         fill: true,
@@ -54,7 +53,6 @@ export default function VisitMap() {
                     
                     positions={coordinates}
                     >
-                        
                     <Tooltip>{guguns[idx]}:{vstrSl[idx]+'(만명)'}</Tooltip>
                 </Polygon>
 
@@ -74,13 +72,11 @@ export default function VisitMap() {
         return (typeof latlngs[0][0] !== 'object' && typeof latlngs[0][0] !== 'undefined');
     }
     return (
-        <><div style={{backgroundColor: "#6495ED"}}>
-            <h4 style={{ padding:10, color:"white", textAlign:"center"}}>구별 방문자수</h4>
-        </div> 
+        <>
             <MapContainer
                 center={center}
                 zoom={10}
-                style={{ width: '47.9vw', height: '40vh' }}
+                style={{ width: '48vw', height: '45vh' }}
             >
                 <TileLayer
                     url="https://api.maptiler.com/maps/streets/256/{z}/{x}/{y}.png?key=uCho9mIgWqmJ0Ud5xLcu"

@@ -22,17 +22,16 @@
     width: 30%;
     background-color: rgb(255, 255, 255);
     margin: 0px 5px 5px 10px;
-    /* vertical-align: middle; */
-    padding-left: 5%;
+    vertical-align: middle;
+    padding-left: 40px;
     padding-bottom: 10px;
-    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .vpie .chart-container{
     padding: 4% 3% 0 3%;
     /* border: 2px solid gray; */
     height: 100%;
-    width: 400px;
+    width: 480px;
 }
 
 .vsankey{
@@ -41,7 +40,6 @@
     background-color: rgb(255, 255, 255);
     padding-left: 20px;
     padding-right: 20px;
-    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .highcharts-background{
@@ -56,14 +54,12 @@
     width: 50%;
     margin: 5px 5px 10px 10px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .vfestival{
     flex-grow: 1;
     margin: 5px 10px 10px 5px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 .vfestival .chart-container{

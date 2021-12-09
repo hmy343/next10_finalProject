@@ -52,7 +52,7 @@ function CostMixedBar({data1,data2,data3}){
               weight: 'bold',
             },
             padding: {
-              bottom: 30
+              bottom: 40
             }
           }
         },
@@ -97,7 +97,7 @@ function CostMixedBar({data1,data2,data3}){
   return(
     <div>
       <div className="chart-container">
-        <canvas ref={canvasDom} height="160"></canvas>
+        <canvas ref={canvasDom} height="180"></canvas>
       </div>
     </div>
   );

@@ -23,6 +23,7 @@ const Keyword= () =>{
         const key_words = ds_srch.map(item => item.key_word)
         const rates = ds_srch.map(item => item.rate)
         // console.log(ds_srch)
+        
         // 사업체 분포, 관광지출액
         const { cnp_expd } = data;
         const enp_majors = cnp_expd.map(item => item.enp_major)
@@ -35,7 +36,7 @@ const Keyword= () =>{
         setChart2(
             makeMixedBar(enp_majors, enps, expd_totals)
         )
-
+        
         // 키워드 분포 테이블
         setChart3(ds_srch);
 
@@ -51,6 +52,7 @@ const Keyword= () =>{
     const makeMixedBar = (d1, d2, d3) => {
         return(<KwMixedBar data1 = {d1} data2 = {d2} data3 = {d3}/>)    
     }
+
 
     return(
         <div className="keyword">

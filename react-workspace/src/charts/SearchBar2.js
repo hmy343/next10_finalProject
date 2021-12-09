@@ -118,7 +118,7 @@ function SearchBar2({ data }) {
       x: {
         ticks: {
           stepSize: 100,
-          max: 300,
+          max: 300
         },
         title: {
           display: true,
