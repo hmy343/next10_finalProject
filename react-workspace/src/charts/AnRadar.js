@@ -42,7 +42,7 @@ function AnRadar({d1,d2}){
           },
             subtitle: { // 차트 제목
                 display: true,
-                text: '부산시 관광지수 항목별 비율',
+                text: '부산시 관광지수 항목별 비중',
                 color: 'black',
                 font: {
                   size: 18,

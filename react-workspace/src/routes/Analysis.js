@@ -15,9 +15,9 @@ const Analysis = () => {
   const [chart3,setChart3] = useState(0)
 
   useEffect(async () => {
-    const { data } =await axios.get('http://localhost:9797/analysis');
-    const { index_pro } = data;
-    const { mid_index } = data;
+    const { data } = await axios.get('http://localhost:9797/analysis');
+    const { index_pro } = data; // 부산시 관광지수 항목별 비중
+    const { mid_index } = data; // 구별 관광지수 현황(중분류)
     const { all_index } = data; // 지수 테이블
     const { tour_infra } = mid_index;
     const { tour_effect } = mid_index;

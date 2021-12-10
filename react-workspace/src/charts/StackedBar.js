@@ -12,7 +12,7 @@ function StackedBar({d1,d2,d3,d4}) {
     datasets: [
       {
         label: '관광자원분포',
-        data: d2,
+        data: d4,
         backgroundColor: colors[0],
         stack: 'Stack 0',
         // datalabels:{
@@ -22,13 +22,13 @@ function StackedBar({d1,d2,d3,d4}) {
       },
       {
         label: '관광인프라',
-        data: d3,
+        data: d2,
         backgroundColor: colors[1],
         stack: 'Stack 0',
       },
       {
         label: '지역관광효과',
-        data: d4,
+        data: d3,
         backgroundColor: colors[2],
         stack: 'Stack 1',
       },
